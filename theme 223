@@ -1,0 +1,3026 @@
+<!--
+ 
+            maziekeen's theme #223
+            https://maziekeen.tumblr.com/
+ 
+ 
+    PLEASE DO NOT:
+    remove the credits; claim as your own; use as a base, take parts
+    of the theme, repost as your own
+    YOU CAN:
+    edit as much as you want for your own personal use only.
+ 
+ 
+    CREDITS,
+     
+    captions and audio style by seyche
+    css photosets by annasthms
+    time stamp by bychloethemes
+    smooth scroll by michael herf and balazs galambosi
+    cappuccicons icons by suiomi.com
+    feathericons by github.com/feathericons/feather
+    normalize reest html by necolas.github.io
+    tippyjs tooltips by silbrigthemes
+    short notecount, like and reblog, video resize by shythemes
+    npf images readjustment v.02 by glenthemes
+    dark mode by twan mulder at blog.prototypr.io/8b461864644b 
+        & ananya neogi at dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+ 
+-->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+        <title>{block:TagPage}{Tag} | {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} | {/block:SearchPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+
+    {block:Hidden}
+    <!-- image options -->
+
+    <meta name="image:Sidebar Image" content="" />
+    <meta name="image:Background Image" content="" />
+
+    <!-- light color options -->
+    <meta name="color:Background Theme Color" content="#fdfdfd" />
+    <meta name="color:Body Text Color" content="#404040" />
+    <meta name="color:Body Link Color" content="#949494" />
+    <meta name="color:Body Link Hover Color" content="#404040" />
+    <meta name="color:Bold Color" content="#404040">
+    <meta name="color:Italic Color" content="#828282">
+    <meta name="color:Sidebar Title Color" content="#404040">
+    <meta name="color:Sidebar Text Color" content="#404040">
+    <meta name="color:Sidebar Link Icons Color" content="#404040">
+    <meta name="color:Sidebar Link Text Color" content="#404040">
+    <meta name="color:Sidebar Primary Background Color" content="#ffffff">
+    <meta name="color:Sidebar Secondary Background Color" content="#edecec">
+    <meta name="color:Hover Text Background Color" content="#1a1a1a" />
+    <meta name="color:Hover Text Color" content="#ffffff" />
+    <meta name="color:Date Text Color" content="#262626" />
+    <meta name="color:Date Primary Link Color" content="#262626">
+    <meta name="color:Date Primary Background Color" content="#edecec" />
+    <meta name="color:Date Secondary Link Color" content="#262626">
+    <meta name="color:Date Secondary Background Color" content="#edecec" />
+    <meta name="color:Tags Link Color" content="#9d9d9d">
+    <meta name="color:Liked Link Color" content="#6a6a6a">
+    <meta name="color:Posts Background Color" content="#ffffff" />
+    <meta name="color:Borders Color" content="#ececec" />
+    <meta name="color:Scrollbar Color" content="#1a1a1a" />
+    <meta name="color:Tumblr Controls Icon Color" content="#1a1a1a" />
+
+
+    <!-- dark color options -->
+    <meta name="color:Dark Background Theme Color" content="#0e0e0e" />
+    <meta name="color:Dark Body Text Color" content="#959595" />
+    <meta name="color:Dark Body Link Color" content="#f7f7f7" />
+    <meta name="color:Dark Body Link Hover Color" content="#f6cf6a" />
+    <meta name="color:Dark Bold Color" content="#f7f7f7">
+    <meta name="color:Dark Italic Color" content="#acacac">
+    <meta name="color:Dark Sidebar Title Color" content="#f7f7f7">
+    <meta name="color:Dark Sidebar Text Color" content="#959595">
+    <meta name="color:Dark Sidebar Link Icons Color" content="#f7f7f7">
+    <meta name="color:Dark Sidebar Primary Background Color" content="#191919">
+    <meta name="color:Dark Sidebar Secondary Background Color" content="#151515">
+    <meta name="color:Dark Hover Text Background Color" content="#ffffff" />
+    <meta name="color:Dark Hover Text Color" content="#171717" />
+    <meta name="color:Dark Date Text Color" content="#e2e2e2" />
+    <meta name="color:Dark Date Primary Link Color" content="#ffffff">
+    <meta name="color:Dark Date Primary Background Color" content="#151515" />
+    <meta name="color:Dark Date Secondary Link Color" content="#ffffff">
+    <meta name="color:Dark Date Secondary Background Color" content="#151515" />
+    <meta name="color:Dark Tags Link Color" content="#f6cf6a">
+    <meta name="color:Dark Liked Link Color" content="#f6cf6a">
+    <meta name="color:Dark Posts Background Color" content="#191919" />
+    <meta name="color:Dark Borders Color" content="#202020" />
+    <meta name="color:Dark Scrollbar Color" content="#f6cf6a" />
+    <meta name="color:Dark Tumblr Controls Icon Color" content="#f6cf6a" />
+
+    <!-- text, font style and sizes options -->
+    <meta name="text:Body Font Family" content="Hind Siliguri" />
+    <meta name="text:Sidebar Title Font Family" content="Poppins" />
+    <meta name="text:Posts Title Font Family" content="Poppins" />
+
+    <meta name="select:Body Font Size" content="1.1rem" title="11px" />
+    <meta name="select:Body Font Size" content="0.8rem" title="8px" />
+    <meta name="select:Body Font Size" content="0.9rem" title="9px" />
+    <meta name="select:Body Font Size" content="1rem" title="10px" />
+    <meta name="select:Body Font Size" content="1.2rem" title="12px" />
+    <meta name="select:Body Font Size" content="1.3rem" title="13px" />
+    <meta name="select:Body Font Size" content="1.4rem" title="14px" />
+    <meta name="select:Body Font Size" content="1.5rem" title="15px" />
+    <meta name="select:Body Font Size" content="1.6rem" title="16px" />
+    <meta name="select:Body Font Size" content="1.7rem" title="17px" />
+    <meta name="select:Body Font Size" content="1.8rem" title="18px" />
+
+    <meta name="select:Body Font Letter Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Body Font Letter Spacing" content="normal" title="none" />
+    <meta name="select:Body Font Letter Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Body Font Letter Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Body Font Letter Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Body Font Letter Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Body Font Letter Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Body Font Letter Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Body Font Letter Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Body Font Letter Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Body Font Letter Spacing" content="0.3rem" title="3px" />
+
+    <meta name="select:Body Font Word Spacing" content="normal" title="none" />
+    <meta name="select:Body Font Word Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Body Font Word Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Body Font Word Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Body Font Word Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Body Font Word Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Body Font Word Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Body Font Word Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Body Font Word Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Body Font Word Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Body Font Word Spacing" content="0.3rem" title="3px" />
+
+    <meta name="select:Body Font Weight" content="400" title="normal" />
+    <meta name="select:Body Font Weight" content="700" title="bold" />
+    <meta name="select:Body Font Weight" content="300" title="light" />
+    <meta name="select:Body Font Weight" content="500" title="medium" />
+    <meta name="select:Body Font Weight" content="600" title="semi-bold" />
+    
+    <meta name="select:Bold Font Weight" content="500" title="medium" />
+    <meta name="select:Bold Font Weight" content="700" title="bold" />
+    <meta name="select:Bold Font Weight" content="300" title="light" />
+    <meta name="select:Bold Font Weight" content="400" title="normal" />
+    <meta name="select:Bold Font Weight" content="600" title="semi-bold" />
+    
+    <meta name="select:Posts Text Position" content="left">
+    <meta name="select:Posts Text Position" content="justify">
+    
+    <!-- posts titles (h1, h2, h3, h4, h5, h6) -->
+    <meta name="select:Posts Titles Font Size" content="1.4rem" title="14px" />
+    <meta name="select:Posts Titles Font Size" content="1rem" title="10px" />
+    <meta name="select:Posts Titles Font Size" content="1.1rem" title="11px" />
+    <meta name="select:Posts Titles Font Size" content="1.2rem" title="12px" />
+    <meta name="select:Posts Titles Font Size" content="1.3rem" title="13px" />
+    <meta name="select:Posts Titles Font Size" content="1.5rem" title="15px" />
+    <meta name="select:Posts Titles Font Size" content="1.6rem" title="16px" />
+    <meta name="select:Posts Titles Font Size" content="1.7rem" title="17px" />
+    <meta name="select:Posts Titles Font Size" content="1.8rem" title="18px" />
+    
+    <meta name="select:Posts Titles Font Letter Spacing" content="normal" title="none" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Posts Titles Font Letter Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Posts Titles Font Word Spacing" content="normal" title="none" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Posts Titles Font Word Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Posts Titles Font Weight" content="700" title="bold" />
+    <meta name="select:Posts Titles Font Weight" content="300" title="light" />
+    <meta name="select:Posts Titles Font Weight" content="400" title="normal" />
+    <meta name="select:Posts Titles Font Weight" content="500" title="medium" />
+    <meta name="select:Posts Titles Font Weight" content="600" title="semi-bold" />
+    
+    <meta name="select:Posts Titles Font Style" content="normal">
+    <meta name="select:Posts Titles Font Style" content="italic">
+    
+    <meta name="select:Posts Titles Text Transform" content="none">
+    <meta name="select:Posts Titles Text Transform" content="uppercase">
+    <meta name="select:Posts Titles Text Transform" content="lowercase">
+    <meta name="select:Posts Titles Text Transform" content="capitalize">
+    
+    <meta name="select:Posts Titles Text Position" content="left">
+    <meta name="select:Posts Titles Text Position" content="center">
+    <meta name="select:Posts Titles Text Position" content="justify">
+    <meta name="select:Posts Titles Text Position" content="right">
+
+    
+    <!-- sidebar position -->
+    <meta name="select:Sidebar Content Position" content="center" title="center">
+    <meta name="select:Sidebar Content Position" content="flex-start" title="top">
+
+    
+    <!-- sidebar title -->
+    <meta name="select:Sidebar Title Font Size" content="1.4rem" title="14px" />
+    <meta name="select:Sidebar Title Font Size" content="0.8rem" title="8px" />
+    <meta name="select:Sidebar Title Font Size" content="0.9rem" title="9px" />
+    <meta name="select:Sidebar Title Font Size" content="1rem" title="10px" />
+    <meta name="select:Sidebar Title Font Size" content="1.1rem" title="11px" />
+    <meta name="select:Sidebar Title Font Size" content="1.2rem" title="12px" />
+    <meta name="select:Sidebar Title Font Size" content="1.3rem" title="13px" />
+    <meta name="select:Sidebar Title Font Size" content="1.5rem" title="15px" />
+    <meta name="select:Sidebar Title Font Size" content="1.6rem" title="16px" />
+    <meta name="select:Sidebar Title Font Size" content="1.7rem" title="17px" />
+    <meta name="select:Sidebar Title Font Size" content="1.8rem" title="18px" />
+    
+    <meta name="select:Sidebar Title Font Letter Spacing" content="normal" title="none" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Sidebar Title Font Letter Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Sidebar Title Font Word Spacing" content="normal" title="none" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Sidebar Title Font Word Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Sidebar Title Font Weight" content="500" title="medium" />
+    <meta name="select:Sidebar Title Font Weight" content="700" title="bold" />
+    <meta name="select:Sidebar Title Font Weight" content="400" title="normal" />
+    <meta name="select:Sidebar Title Font Weight" content="300" title="light" />
+    <meta name="select:Sidebar Title Font Weight" content="600" title="semi-bold" />
+    
+    
+    <meta name="select:Sidebar Title Font Style" content="normal">
+    <meta name="select:Sidebar Title Font Style" content="italic">
+    
+    <meta name="select:Sidebar Title Text Transform" content="none">
+    <meta name="select:Sidebar Title Text Transform" content="uppercase">
+    <meta name="select:Sidebar Title Text Transform" content="lowercase">
+    <meta name="select:Sidebar Title Text Transform" content="capitalize">
+    
+    <meta name="select:Sidebar Title Text Position" content="left" />
+    <meta name="select:Sidebar Title Text Position" content="center" />
+    <meta name="select:Sidebar Title Text Position" content="right" />
+    
+     <!-- sidebar links icons -->
+    <meta name="select:Sidebar Link Icons Size" content="1.1rem" title="11px" />
+    <meta name="select:Sidebar Link Icons Size" content="1rem" title="10px" />
+    <meta name="select:Sidebar Link Icons Size" content="0.8rem" title="8px" />
+    <meta name="select:Sidebar Link Icons Size" content="0.9rem" title="9px" />
+    <meta name="select:Sidebar Link Icons Size" content="1.2rem" title="12px" />
+    <meta name="select:Sidebar Link Icons Size" content="1.3rem" title="13px" />
+    <meta name="select:Sidebar Link Icons Size" content="1.4rem" title="14px" />
+    <meta name="select:Sidebar Link Icons Size" content="1.5rem" title="15px" />
+    <meta name="select:Sidebar Link Icons Size" content="1.6rem" title="16px" />
+    <meta name="select:Sidebar Link Icons Size" content="1.7rem" title="17px" />
+    <meta name="select:Sidebar Link Icons Size" content="1.8rem" title="18px" />
+    
+    <meta name="select:Sidebar Link Icons Position" content="center" title="center" />
+    <meta name="select:Sidebar Link Icons Position" content="flex-start" title="top" />
+    <meta name="select:Sidebar Link Icons Position" content="flex-end" title="bottom" />
+    
+    <!-- sidebar links text -->
+    <meta name="select:Sidebar Link Font Size" content="1.1rem" title="11px" />
+    <meta name="select:Sidebar Link Font Size" content="1rem" title="10px" />
+    <meta name="select:Sidebar Link Font Size" content="0.8rem" title="8px" />
+    <meta name="select:Sidebar Link Font Size" content="0.9rem" title="9px" />
+    <meta name="select:Sidebar Link Font Size" content="1.2rem" title="12px" />
+    <meta name="select:Sidebar Link Font Size" content="1.3rem" title="13px" />
+    <meta name="select:Sidebar Link Font Size" content="1.4rem" title="14px" />
+    <meta name="select:Sidebar Link Font Size" content="1.5rem" title="15px" />
+    <meta name="select:Sidebar Link Font Size" content="1.6rem" title="16px" />
+    <meta name="select:Sidebar Link Font Size" content="1.7rem" title="17px" />
+    <meta name="select:Sidebar Link Font Size" content="1.8rem" title="18px" />
+    
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="normal" title="none" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Sidebar Link Font Letter Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Sidebar Link Font Word Spacing" content="normal" title="none" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Sidebar Link Font Word Spacing" content="0.3rem" title="3px" />
+    
+    
+    <meta name="select:Sidebar Link Font Weight" content="400" title="normal" />
+    <meta name="select:Sidebar Link Font Weight" content="700" title="bold" />
+    <meta name="select:Sidebar Link Font Weight" content="300" title="light" />
+    <meta name="select:Sidebar Link Font Weight" content="500" title="medium" />
+    <meta name="select:Sidebar Link Font Weight" content="600" title="semi-bold" />
+    
+    <meta name="select:Sidebar Link Font Style" content="normal" />
+    <meta name="select:Sidebar Link Font Style" content="italic" />
+    
+    <meta name="select:Sidebar Link Text Transform" content="none">
+    <meta name="select:Sidebar Link Text Transform" content="uppercase">
+    <meta name="select:Sidebar Link Text Transform" content="lowercase">
+    <meta name="select:Sidebar Link Text Transform" content="capitalize">
+    
+    <meta name="select:Sidebar Link Text Position" content="left" title="left" />
+    <meta name="select:Sidebar Link Text Position" content="center" title="center" />
+    <meta name="select:Sidebar Link Text Position" content="right" title="right" />
+    
+    
+    <!-- description -->
+    <meta name="select:Description Font Size" content="1.1rem" title="11px" />
+    <meta name="select:Description Font Size" content="1rem" title="10px" />
+    <meta name="select:Description Font Size" content="0.8rem" title="8px" />
+    <meta name="select:Description Font Size" content="0.9rem" title="9px" />
+    <meta name="select:Description Font Size" content="1.2rem" title="12px" />
+    <meta name="select:Description Font Size" content="1.3rem" title="13px" />
+    <meta name="select:Description Font Size" content="1.4rem" title="14px" />
+    <meta name="select:Description Font Size" content="1.5rem" title="15px" />
+    <meta name="select:Description Font Size" content="1.6rem" title="16px" />
+    <meta name="select:Description Font Size" content="1.7rem" title="17px" />
+    <meta name="select:Description Font Size" content="1.8rem" title="18px" />
+    
+    <meta name="select:Description Font Letter Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Description Font Letter Spacing" content="normal" title="none" />
+    <meta name="select:Description Font Letter Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Description Font Letter Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Description Font Letter Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Description Font Letter Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Description Font Letter Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Description Font Letter Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Description Font Letter Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Description Font Letter Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Description Font Letter Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Description Font Word Spacing" content="normal" title="none" />
+    <meta name="select:Description Font Word Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Description Font Word Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Description Font Word Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Description Font Word Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Description Font Word Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Description Font Word Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Description Font Word Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Description Font Word Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Description Font Word Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Description Font Word Spacing" content="0.3rem" title="3px" />
+    
+    
+    <meta name="select:Description Font Weight" content="400" title="normal" />
+    <meta name="select:Description Font Weight" content="700" title="bold" />
+    <meta name="select:Description Font Weight" content="300" title="light" />
+    <meta name="select:Description Font Weight" content="500" title="medium" />
+    <meta name="select:Description Font Weight" content="600" title="semi-bold" />
+    
+    <meta name="select:Description Font Style" content="normal" />
+    <meta name="select:Description Font Style" content="italic" />
+    
+    <meta name="select:Description Text Transform" content="none">
+    <meta name="select:Description Text Transform" content="uppercase">
+    <meta name="select:Description Text Transform" content="lowercase">
+    <meta name="select:Description Text Transform" content="capitalize">
+    
+    <meta name="select:Description Text Horizontal Position" content="left" title="left" />
+    <meta name="select:Description Text Horizontal Position" content="center" title="center" />
+    <meta name="select:Description Text Horizontal Position" content="right" title="right" />
+    
+    <meta name="select:Description Text Vertical Position" content="center" title="center" />
+    <meta name="select:Description Text Vertical Position" content="flex-start" title="top" />
+    <meta name="select:Description Text Vertical Position" content="flex-end" title="bottom" />
+    
+    
+    <!-- pagination links -->
+    <meta name="select:Pagination Links Font Size" content="1.1rem" title="11px" />
+    <meta name="select:Pagination Links Font Size" content="1rem" title="10px" />
+    <meta name="select:Pagination Links Font Size" content="0.8rem" title="8px" />
+    <meta name="select:Pagination Links Font Size" content="0.9rem" title="9px" />
+    <meta name="select:Pagination Links Font Size" content="1.2rem" title="12px" />
+    <meta name="select:Pagination Links Font Size" content="1.3rem" title="13px" />
+    <meta name="select:Pagination Links Font Size" content="1.4rem" title="14px" />
+    <meta name="select:Pagination Links Font Size" content="1.5rem" title="15px" />
+    <meta name="select:Pagination Links Font Size" content="1.6rem" title="16px" />
+    <meta name="select:Pagination Links Font Size" content="1.7rem" title="17px" />
+    <meta name="select:Pagination Links Font Size" content="1.8rem" title="18px" />
+    
+    <meta name="select:Pagination Font Letter Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Pagination Font Letter Spacing" content="normal" title="none" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Pagination Font Letter Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Pagination Font Word Spacing" content="normal" title="none" />
+    <meta name="select:Pagination Font Word Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Pagination Font Word Spacing" content="0.3rem" title="3px" />
+    
+    
+    <meta name="select:Pagination Links Font Weight" content="400" title="normal" />
+    <meta name="select:Pagination Links Font Weight" content="700" title="bold" />
+    <meta name="select:Pagination Links Font Weight" content="300" title="light" />
+    <meta name="select:Pagination Links Font Weight" content="500" title="medium" />
+    <meta name="select:Pagination Links Font Weight" content="600" title="semi-bold" />
+    
+    <meta name="select:Pagination Links Font Style" content="normal" />
+    <meta name="select:Pagination Links Font Style" content="italic" />
+    
+    <meta name="select:Pagination Links Text Transform" content="lowercase" />
+    <meta name="select:Pagination Links Text Transform" content="none" />
+    <meta name="select:Pagination Links Text Transform" content="uppercase" />
+    <meta name="select:Pagination Links Text Transform" content="capitalize" />
+    
+        <!-- date / post info -->
+    <meta name="select:Date Font Size" content="1.1rem" title="11px" />
+    <meta name="select:Date Font Size" content="1rem" title="10px" />
+    <meta name="select:Date Font Size" content="0.8rem" title="8px" />
+    <meta name="select:Date Font Size" content="0.9rem" title="9px" />
+    <meta name="select:Date Font Size" content="1.2rem" title="12px" />
+    <meta name="select:Date Font Size" content="1.3rem" title="13px" />
+    <meta name="select:Date Font Size" content="1.4rem" title="14px" />
+    <meta name="select:Date Font Size" content="1.5rem" title="15px" />
+    <meta name="select:Date Font Size" content="1.6rem" title="16px" />
+    <meta name="select:Date Font Size" content="1.7rem" title="17px" />
+    <meta name="select:Date Font Size" content="1.8rem" title="18px" />
+    
+    <meta name="select:Date Font Letter Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Date Font Letter Spacing" content="normal" title="none" />
+    <meta name="select:Date Font Letter Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Date Font Letter Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Date Font Letter Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Date Font Letter Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Date Font Letter Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Date Font Letter Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Date Font Letter Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Date Font Letter Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Date Font Letter Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Date Font Word Spacing" content="normal" title="none" />
+    <meta name="select:Date Font Word Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Date Font Word Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Date Font Word Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Date Font Word Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Date Font Word Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Date Font Word Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Date Font Word Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Date Font Word Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Date Font Word Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Date Font Word Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Date Font Weight" content="500" title="medium" />
+    <meta name="select:Date Font Weight" content="700" title="bold" />
+    <meta name="select:Date Font Weight" content="400" title="normal" />
+    <meta name="select:Date Font Weight" content="300" title="light" />
+    <meta name="select:Date Font Weight" content="600" title="semi-bold" />
+    
+    <meta name="select:Date Font Style" content="normal" />
+    <meta name="select:Date Font Style" content="italic" />
+    
+    <meta name="select:Date Text Transform" content="lowercase" />
+    <meta name="select:Date Text Transform" content="none" />
+    <meta name="select:Date Text Transform" content="uppercase" />
+    <meta name="select:Date Text Transform" content="capitalize" />
+
+
+    <!-- tags / post info -->
+    <meta name="select:Tags Font Size" content="1.1rem" title="11px" />
+    <meta name="select:Tags Font Size" content="1rem" title="10px" />
+    <meta name="select:Tags Font Size" content="0.8rem" title="8px" />
+    <meta name="select:Tags Font Size" content="0.9rem" title="9px" />
+    <meta name="select:Tags Font Size" content="1.2rem" title="12px" />
+    <meta name="select:Tags Font Size" content="1.3rem" title="13px" />
+    <meta name="select:Tags Font Size" content="1.4rem" title="14px" />
+    <meta name="select:Tags Font Size" content="1.5rem" title="15px" />
+    <meta name="select:Tags Font Size" content="1.6rem" title="16px" />
+    <meta name="select:Tags Font Size" content="1.7rem" title="17px" />
+    <meta name="select:Tags Font Size" content="1.8rem" title="18px" />
+    
+    <meta name="select:Tags Font Letter Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Tags Font Letter Spacing" content="normal" title="none" />
+    <meta name="select:Tags Font Letter Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Tags Font Letter Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Tags Font Letter Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Tags Font Letter Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Tags Font Letter Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Tags Font Letter Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Tags Font Letter Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Tags Font Letter Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Tags Font Letter Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Tags Font Word Spacing" content="normal" title="none" />
+    <meta name="select:Tags Font Word Spacing" content="0.015rem" title="0.15px" />
+    <meta name="select:Tags Font Word Spacing" content="0.025rem" title="0.25px" />
+    <meta name="select:Tags Font Word Spacing" content="0.075rem" title="0.75px" />
+    <meta name="select:Tags Font Word Spacing" content="0.08rem" title="0.80px" />
+    <meta name="select:Tags Font Word Spacing" content="0.085rem" title="0.85px" />
+    <meta name="select:Tags Font Word Spacing" content="0.09rem" title="0.90px" />
+    <meta name="select:Tags Font Word Spacing" content="0.095rem" title="0.95px" />
+    <meta name="select:Tags Font Word Spacing" content="0.1rem" title="1px" />
+    <meta name="select:Tags Font Word Spacing" content="0.2rem" title="2px" />
+    <meta name="select:Tags Font Word Spacing" content="0.3rem" title="3px" />
+    
+    <meta name="select:Tags Font Weight" content="400" title="normal" />
+    <meta name="select:Tags Font Weight" content="300" title="light" />
+    <meta name="select:Tags Font Weight" content="500" title="medium" />
+    <meta name="select:Tags Font Weight" content="600" title="semi-bold" />
+    <meta name="select:Tags Font Weight" content="700" title="bold" />
+    
+    <meta name="select:Tags Font Style" content="normal" />
+    <meta name="select:Tags Font Style" content="italic" />
+    
+    <meta name="select:Tags Text Transform" content="none" />
+    <meta name="select:Tags Text Transform" content="uppercase" />
+    <meta name="select:Tags Text Transform" content="lowercase" />
+    <meta name="select:Tags Text Transform" content="capitalize" />
+    
+    <meta name="select:Tags Text Position" content="left" />
+    <meta name="select:Tags Text Position" content="center" />
+    <meta name="select:Tags Text Position" content="right" />
+
+        
+    <!--posts sizes-->
+    <meta name="select:Post Width" content="54rem" title="540px" />
+    <meta name="select:Post Width" content="50rem" title="500px" />
+    <meta name="select:Post Width" content="40rem" title="400px" />
+    
+    <meta name="select:Photoset Gutter" content="0.44rem" title="For 540px" />
+    <meta name="select:Photoset Gutter" content="1rem" title="For 500px" />
+    <meta name="select:Photoset Gutter" content="0.2rem" title="For 400px" />
+    
+    <meta name="text:Posts Margin" content="9.5rem" />
+    <meta name="text:Posts Padding" content="0rem" />
+    
+    <!--posts box shadow-->
+    <meta name="text:Box Shadow Size" content="0px 0.4rem 0.8rem" />
+    <meta name="text:Box Shadow Color" content="0, 0, 0, 0.1" />
+    
+    <!-- sidebar and posts borders -->
+    <meta name="select:Borders Size" content="0.1rem" title="1px" />
+    <meta name="select:Borders Size" content="0rem" title="0px" />
+    <meta name="select:Borders Size" content="0.2rem" title="2px" />
+    <meta name="select:Borders Size" content="0.3rem" title="3px" />
+    <meta name="select:Borders Size" content="0.4rem" title="4px" />
+    <meta name="select:Borders Size" content="0.5rem" title="5px" />
+    
+    <meta name="select:Borders Style" content="solid" />
+    <meta name="select:Borders Style" content="dotted" />
+    <meta name="select:Borders Style" content="dashed" />
+    <meta name="select:Borders Style" content="double" />
+    <meta name="select:Borders Style" content="ridge" />
+    
+    
+    <!-- sidebar image sizes and position -->
+    <meta name="select:Sidebar Icon Image Size" content="10rem" title="100px" />
+    <meta name="select:Sidebar Icon Image Size" content="6rem" title="60px" />
+    <meta name="select:Sidebar Icon Image Size" content="7rem" title="70px" />
+    <meta name="select:Sidebar Icon Image Size" content="8rem" title="80px" />
+    <meta name="select:Sidebar Icon Image Size" content="9rem" title="90px" />
+    <meta name="select:Sidebar Icon Image Size" content="17rem" title="160px" />
+
+    <meta name="select:Sidebar Image Position" content="center" />
+    <meta name="select:Sidebar Image Position" content="left" />
+    <meta name="select:Sidebar Image Position" content="right" />
+    
+    
+    <!-- conditionals -->
+    <meta name="if:Sidebar Image" content="1"/>
+    <meta name="if:Sidebar Icon Image" content="0"/>
+    <meta name="if:Sidebar Icon Square Style" content="0"/>
+    <meta name="if:Sidebar Title" content="1"/>
+    <meta name="if:Sidebar Links Text" content="0"/>
+    <meta name="if:Hide Description" content="0"/>
+    <meta name="if:Disable Switch Theme Color" content="0" />
+    <meta name="if:Custom Controls" content="1"/>
+    <meta name="if:Links Underline Border" content="0" />
+    <meta name="if:Tumblr Captions" content="1"/>
+    <meta name="if:Caption Avatar" content="0" />
+    <meta name="if:Custom Caption Icon" content="1" />
+    <meta name="if:Username Original Post" content="1"/>
+    <meta name="if:Show More Info Text" content="0"/>
+    <meta name="if:Disable Show More Info" content="0"/>
+    <meta name="if:Box Shadow" content="1" />
+    <meta name="if:Show Borders" content="1" />
+    <meta name="if:Images Black and White" content="0" />
+    
+    <meta name="if:Sidebar Link 1" content="1" />
+    <meta name="if:Sidebar Link 2" content="1" />
+    <meta name="if:Sidebar Link 3" content="1" />
+    <meta name="if:Sidebar Link 4" content="1" />
+    
+    
+    <!--sidebar link-->
+    <meta name="text:Home URL" content="/" />
+    <meta name="text:Home Text" content="Home" />
+    <meta name="text:Home Icon" content="home-o" />
+    
+    <meta name="text:Ask URL" content="/ask" />
+    <meta name="text:Ask Text" content="Ask" />
+    <meta name="text:Ask Icon" content="envelope-o" />
+    
+    <meta name="text:Sidebar Link 1 URL" content="/" />
+    <meta name="text:Sidebar Link 1 Text" content="Link 1" />
+    <meta name="text:Sidebar Link 1 Icon" content="app-o" />
+    
+    <meta name="text:Sidebar Link 2 URL" content="/" />
+    <meta name="text:Sidebar Link 2 Text" content="Link 2" />
+    <meta name="text:Sidebar Link 2 Icon" content="trash" />
+    
+    <meta name="text:Sidebar Link 3 URL" content="/" />
+    <meta name="text:Sidebar Link 3 Text" content="Link 3" />
+    <meta name="text:Sidebar Link 3 Icon" content="hashtag" />
+    
+    <meta name="text:Sidebar Link 4 URL" content="/" />
+    <meta name="text:Sidebar Link 4 Text" content="Link 4" />
+    <meta name="text:Sidebar Link 4 Icon" content="notes-o" />
+
+    {/block:Hidden}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    <!-- stylesheets -->
+    <link href="https://static.tumblr.com/0siu224/1Eaqd80d8/normalize.css" rel="stylesheet"> <!-- reset html code -->
+    
+    <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet"> <!-- photosets -->
+
+    <!-- custom icons -->
+    <script src="//pull.cappuccicons.com/cpf.js"></script> <!-- custom icons -->
+    <link href="//solrainha.github.io/saturnicons/saturnicons.css" rel="stylesheet"> <!-- custom icons -->
+    <script src="https://unpkg.com/feather-icons"></script> <!-- custom icons -->
+
+    <!-- custom fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family={text:Body Font Family}:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family={text:Sidebar Title Font Family}:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family={text:Posts Title Font Family}:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="//npf-images-v3.github.io/recon.css"> <!-- npf images readjustment -->
+        
+
+    <style>
+    :root {
+        /*   colors   */
+        --backgroundThemeColor: {color:Background Theme Color};
+        --bodyTextColor: {color:Body Text Color};
+        --bodyLinkColor: {color:Body Link Color};
+        --bodyLinkHoverColor: {color:Body Link Hover Color};
+        --boldColor: {color:Bold Color};
+        --italicColor: {color:Italic Color};
+        --sidebarTextColor: {color:Sidebar Text Color};
+        --sidebarLinkIconsColor: {color:Sidebar Link Icons Color};
+        --sidebarLinkTextColor: {color:Sidebar Link Text Color};
+        --sidebarTitleColor: {color:Sidebar Title Color};
+        --sidebarPrimaryBackgroundColor: {color:Sidebar Primary Background Color};
+        --sidebarSecondaryBackgroundColor: {color:Sidebar Secondary Background Color};
+        --hoverTextBackgroundColor: {color:Hover Text Background Color};
+        --hoverTextColor: {color:Hover Text Color};
+        --datePrimaryLinkColor:{color:Date Link Color};
+        --datePrimaryBackgroundColor: {color:Date Primary Background Color};
+        --dateSecondaryLinkColor:{color:Date Secondary Link Color};
+        --dateSecondaryBackgroundColor: {color:Date Secondary Background Color};
+        --dateTextColor: {color:Date Text Color};
+        --tagsLinkColor: {color:Tags Link Color};
+        --likedLinkColor: {color:Liked Link Color};
+        --scrollbarColor: {color:Scrollbar Color};
+        --bordersColor: {color:Borders Color};
+        --postsBackgroundColor: {color:Posts Background Color};
+        --tumblrControlsIconColor: {color:Tumblr Controls Icon Color};
+
+        /*   fonts, sizes, styles   */
+        --bodyFontFamily: {text:Body Font Family};
+        --sidebarTitleFontFamily: {text:Sidebar Title Font Family};
+        --postsTitleFontFamily: {text:Posts Title Font Family};
+
+        /*   body  */
+        --bodyFontSize: {select:Body Font Size};
+        --bodyFontLetterSpacing: {select:Body Font Letter Spacing};
+        --bodyFontWordSpacing: {select:Body Font Word Spacing};
+        --bodyFontWeight: {select:Body Font Weight};
+        --boldFontWeight: {select:Bold Font Weight};
+            
+        /*sidebar title*/
+        --sidebarTitleFontSize: {select:Sidebar Title Font Size};
+        --sidebarTitleFontLetterSpacing: {select:Sidebar Title Font Letter Spacing};
+        --sidebarTitleFontWordSpacing: {select:Sidebar Title Font Word Spacing};
+        --sidebarTitleFontWeight: {select:Sidebar Title Font Weight};
+        --sidebarTitleTextTransform: {select:Sidebar Title Text Transform};
+        --sidebarTitleFontStyle: {select:Sidebar Title Font Style};
+        --sidebarTitleTextPosition: {select:Sidebar Title Text Position};
+        
+        --sidebarTitleLineHeight: calc(var(--sidebarTitleFontSize) * 1.5);
+        
+        /*description*/
+        --descriptionFontSize: {select:Description Font Size};
+        --descriptionFontLetterSpacing: {select:Description Font Letter Spacing};
+        --descriptionFontWordSpacing: {select:Description Font Word Spacing};
+        --descriptionFontWeight: {select:Description Font Weight};
+        --descriptionTextTransform: {select:Description Text Transform};
+        --descriptionFontStyle: {select:Description Font Style};
+        --descriptionTextHorizontalPosition: {select:Description Text Horizontal Position};
+        --descriptionTextVerticalPosition: {select:Description Text Vertical Position};
+        
+        
+        --descriptionLineHeight: calc(var(--descriptionFontSize) * 1.3);
+        
+
+        /*sidebar links icons*/
+        --sidebarLinkIconsSize: {select:Sidebar Link Icons Size};
+        --sidebarLinkIconsPosition: {select:Sidebar Link Icons Position};
+        
+         /*sidebar links text*/
+        --sidebarLinkFontSize: {select:Sidebar Link Font Size};
+        --sidebarLinkFontLetterSpacing: {select:Sidebar Link Font Letter Spacing};
+        --sidebarLinkFontWordSpacing: {select:Sidebar Link Font Word Spacing};
+        --sidebarLinkFontWeight: {select:Sidebar Link Font Weight};
+        --sidebarLinkTextTransform: {select:Sidebar Link Text Transform};
+        --sidebarLinkFontStyle: {select:Sidebar Link Font Style};
+        --sidebarLinkTextPosition: {select:Sidebar Link Text Position};
+        
+        --sidebarLinkLineHeight: calc(var(--sidebarLinkFontSize) * 1.3);
+        
+
+        /*pagination, dark switch, credit*/
+        --sidebarContentPosition: {select:Sidebar Content Position};
+        --paginationLinksFontSize: {select:Pagination Links Font Size};
+        --paginationFontLetterSpacing: {select:Pagination Font Letter Spacing};
+        --paginationFontWordSpacing: {select:Pagination Font Word Spacing};
+        --paginationLinksFontWeight: {select:Pagination Links Font Weight};
+        --paginationLinksTextTransform: {select:Pagination Links Text Transform};
+        --paginationLinksFontStyle: {select:Pagination Links Font Style};
+        --paginationLinksPosition: {select:Pagination Links Position};
+        
+        /*sizes*/
+        --sidebarImageSize: 26.8rem;
+        --sidebarIconImageSize: {select:Sidebar Icon Image Size};
+        
+        /*margins, paddings, spaces*/
+        --postsMargin: {text:Posts Margin};
+        --postsPadding:{text:Posts Padding};
+        
+        /*posts*/
+        --postWidth: {select:Post Width};
+        --postsTextPosition: {select:Posts Text Position};
+        --postsTitlesFontSize: {select:Posts Titles Font Size};
+        --postsTitlesFontWeight: {select:Posts Titles Font Weight};
+        --postsTitlesFontLetterSpacing: {select:Posts Titles Font Letter Spacing};
+        --postsTitlesFontWordSpacing: {select:Posts Titles Font Word Spacing};
+        --postsTitlesTextTransform: {select:Posts Titles Text Transform};
+        --postsTitlesFontStyle: {select:Posts Titles Font Style};
+        --postsTextPosition: {select:Posts Text Position};
+        --postsTitlesTextPosition: {select:Posts Titles Text Position};
+        
+        --poststLineHeight: calc(var(--bodyFontSize) * 1.4);
+        --postsTitlesLineHeight: calc(var(--postsTitlesFontSize) * 1.2);
+        
+        /*date,tags, post info*/
+        --dateFontSize:{select:Date Font Size};
+        --dateFontLetterSpacing: {select:Date Font Letter Spacing};
+        --dateFontWordSpacing: {select:Date Font Word Spacing};
+        --dateFontWeight:{select:Date Font Weight};
+        --dateTextTransform:{select:Date Text Transform};
+        --dateFontStyle:{select:Date Font Style};
+        
+        --dateLineHeight: calc(var(--bodyFontSize) * 1.4);
+        --tagsLineHeight: calc(var(--bodyFontSize) * 1.4);
+        
+        --tagsFontSize:{select:Tags Font Size};
+        --tagsFontLetterSpacing: {select:Tags Font Letter Spacing};
+        --tagsFontWordSpacing: {select:Tags Font Word Spacing};
+        --tagsFontWeight:{select:Tags Font Weight};
+        --tagsTextTransform:{select:Tags Text Transform};
+        --tagsFontStyle:{select:Tags Font Style};
+        --tagsTextPosition: {select:Tags Text Position};
+        
+        /*   posts and sidebar borders   */
+        --bordersStyle: {select:Borders Style};
+        --bordersSize: {select:Borders Size};
+        --boxShadowSize:{text:Box Shadow Size};
+        --boxShadowColor:{text:Box Shadow Color};
+        
+        
+    
+        /*   other styles   */
+        --transitions: all .3s ease;
+        
+        
+        /*npf images readjustment */
+        --NPF-Image-Spacing:0.4rem;
+        --NPF-Bottom-Gap-From-Captions:1em;
+    }
+
+    /*   dark colors   */
+    [data-theme="dark"] {
+        --backgroundThemeColor: {color:Dark Background Theme Color};
+        --bodyTextColor: {color:Dark Body Text Color};
+        --bodyLinkColor: {color:Dark Body Link Color};
+        --bodyLinkHoverColor: {color:Dark Body Link Hover Color};
+        --boldColor: {color:Dark Bold Color};
+        --italicColor: {color:Dark Italic Color};
+        --sidebarTextColor: {color:Dark Sidebar Text Color};
+        --sidebarLinkIconsColor: {color:Dark Sidebar Link Icons Color};
+        --sidebarTitleColor: {color:Dark Sidebar Title Color};
+        --sidebarPrimaryBackgroundColor: {color:Dark Sidebar Primary Background Color};
+        --sidebarSecondaryBackgroundColor: {color:Dark Sidebar Secondary Background Color};
+        --hoverTextBackgroundColor: {color:Dark Hover Text Background Color};
+        --hoverTextColor: {color:Dark Hover Text Color};
+        --datePrimaryLinkColor:{color:Dark Date Primary Link Color};
+        --datePrimaryBackgroundColor: {color:Dark Date Primary Background Color};
+        --dateSecondaryLinkColor:{color:Dark Date Secondary Link Color};
+        --dateSecondaryBackgroundColor: {color:Dark Date Secondary Background Color};
+        --dateTextColor: {color:Dark Date Text Color};
+        --tagsLinkColor: {color:Dark Tags Link Color};
+        --likedLinkColor: {color:Dark Liked Link Color};
+        --scrollbarColor: {color:Dark Scrollbar Color};
+        --bordersColor: {color:Dark Borders Color};
+        --postsBackgroundColor: {color:Dark Posts Background Color};
+        --tumblrControlsIconColor: {color:Dark Tumblr Controls Icon Color};
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        background:var(--backgroundThemeColor) url({image:Background Image});
+        background-attachment:fixed;
+        background-color:var(--backgroundThemeColor);
+        font-size:var(--bodyFontSize);
+        font-family: var(--bodyFontFamily), Arial, sans-serif;
+        font-weight: var(--bodyFontWeight);
+        letter-spacing: var(--bodyFontLetterSpacing);
+        word-spacing: var(--bodyFontWordSpacing);
+        color: var(--bodyTextColor);
+    }
+    
+    a {
+        text-decoration:none;
+        color:var(--bodyLinkColor);
+        transition:var(--transitions);
+    }
+    
+    a:hover {
+        color:var(--bodyLinkHoverColor);
+    }
+
+    p:first-child {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    
+    p:last-child {
+        margin-block-end: 0;
+    }
+    
+    small, sup, sub {
+        font-size:var(--bodyFontSize);
+    }
+    
+    pre {
+        word-wrap:break-word!Important;
+        white-space: pre-wrap; 
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        padding: 1rem 0 0.5rem;
+        margin: 0;
+        font-family:var(--postsTitleFontFamily);
+        font-style:var(--postsTitlesFontStyle);
+        font-weight:var(--postsTitlesFontWeight);
+        letter-spacing: var(--postsTitlesFontLetterSpacing);
+        word-spacing: var(--postsTitlesFontWordSpacing);
+        color:var(--boldColor);
+        text-transform:var(--postsTitlesTextTransform);
+        font-size:var(--postsTitlesFontSize);
+        text-align:var(--postsTitlesTextPosition);
+        line-height:var(--postsTitlesLineHeight);
+    }
+    
+    strong, bold, b {
+        color:var(--boldColor);
+        font-weight:var(--boldFontWeight);
+    }
+    
+    italic, i, em {
+        color:var(--italicColor);
+    }
+    
+    hr {
+        width:10rem;
+        margin:1rem 0 1rem 0;
+        border-width: var(--bordersSize) 0px 0px 0px;
+        border-style: var(--bordersStyle);
+        border-color: var(--bordersColor);
+    }
+    
+    
+    {block:IfLinksUnderlineBorder}
+    .sidebar-description a, .sidebar-pagination a, .container-date a,
+    .caption a, .caption-content a, .tumblr_blog a, .ask-user a {
+         text-decoration:underline;
+    }
+    {/block:IfLinksUnderlineBorder}
+    
+    img {
+        max-width:100%;
+        height:auto;
+        display:block;
+        margin: 0;
+        padding: 0;
+    {block:ifImagesBlackandWhite}
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    {/block:ifImagesBlackandWhite}
+        transition:var(--transitions);
+    }
+    
+    img:hover,
+    .container-posts:hover img,
+    .sidebar:hover img {
+        opacity:1;
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    
+    ::-moz-selection {
+        background-color: var(--boldColor);
+        color:var(--postsBackgroundColor);
+    }
+    
+    ::selection {
+        background-color: var(--boldColor);
+        color:var(--postsBackgroundColor);
+    }
+    
+    input {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    /* scrollbar */
+    ::-webkit-scrollbar {
+    width:0.7rem;
+    height:0.7rem;
+    }
+    ::-webkit-scrollbar {
+    background-color:var(--backgroundThemeColor);
+    }
+    ::-webkit-scrollbar-track {
+    border:0.8rem solid var(--backgroundThemeColor);
+    background-color:var(--backgroundThemeColor);
+    }
+    ::-webkit-scrollbar-thumb {
+    border:0.2rem solid var(--backgroundThemeColor);
+    background-color:var(--scrollbarColor);
+    border-radius:1rem;
+    min-height:2.4rem;
+    min-width:2.4rem;
+    }
+
+    /* scroll to top */
+    .scrolltop .feather {
+        margin:-3px 5px -3px -5px;
+    }
+    
+    .scrolltop {
+        width:15px;
+        height:15px;
+        text-align:center;
+        color:var(--bodyLinkColor);
+        display: none;
+        font-size:var(--bodyFontSize);
+    }
+    
+    .scrolltop:hover {
+        color:var(--bodyLinkHoverColor);    
+    }
+    
+    /* tooltips */
+    .tippy-tooltip.custom-theme {
+        text-align:center;
+        font-size:var(--bodyFontSize);
+        font-weight:var(--boldFontWeight);
+        color:var(--hoverTextColor);
+        background-color:var(--hoverTextBackgroundColor);
+    {block:ifBoxShadow}
+        -webkit-box-shadow: var(--boxShadowSize) rgba(var(--boxShadowColor));
+        box-shadow: var(--boxShadowSize) rgba(var(--boxShadowColor));
+    {/block:ifBoxShadow}
+        transition:var(--transitions);
+    }
+
+    /* custom icons */
+    .cp:hover, .feather:hover, .sidebar-pagination ul li .cp:hover {
+         color: var(--bodyLinkHoverColor);
+         stroke: var(--bodyLinkHoverColor);
+    }
+
+    
+    .feather {
+        width: var(--bodyFontSize);
+        height: var(--bodyFontSize);
+    }
+    
+    .clearfix::before, .clearfix::after{
+        content:'';
+        clear:both;
+        display:table;
+    }
+
+    
+    /*global list style*/
+    ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* lists style for posts */
+    .type-text ul,
+    .caption ul {
+        margin: 0 0 1rem 0;
+        padding: 0;
+        list-style:none; 
+    }
+    
+    .type-text ul li,
+    .caption ul li {
+        margin:0.5rem 1.5rem;
+        list-style:none;
+    }
+    
+    .type-text ul li::before,
+    .caption ul li::before {
+        content: '\e08f';
+        font-family:'saturnicons';
+        font-size:calc(var(--bodyFontSize) - 50%);
+        margin-right:0.7rem;
+        display:inline-block;
+        vertical-align:middle;
+        color: var(--bodyLinkColor);
+    }
+    
+    .type-text ol,
+    .caption ol {
+        margin:1.5rem 0;
+        padding: 0 3rem;
+    }
+    
+    .type-text ol li,
+    .caption ol li {
+        list-style-type: decimal;
+    }
+    
+    
+    /*main container*/
+    .theme-container {
+        display: grid;
+        grid-template-columns: 27rem 55rem;
+        grid-template-rows:1fr;
+        gap: 10rem;
+        margin: 5rem 2rem;
+        justify-content: center;
+    }
+    
+    .sidebar {
+        width: 26.8rem;
+        height: 100vh;
+        display: flex;
+        align-items: var(--sidebarContentPosition);
+    }
+    
+    .sidebar-content {
+        position: fixed;
+        width: 26.8rem;
+        background-color:var(--sidebarPrimaryBackgroundColor);
+        {block:IfSidebarIconImage}
+            margin-top: 4rem;
+        {block:IfSidebarIconImage}
+        {block:ifShowBorders}
+        outline:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {/block:ifShowBorders}
+        
+        {block:ifBoxShadow}
+        -webkit-box-shadow: var(--boxShadowSize) rgba(var(--boxShadowColor));
+        box-shadow: var(--boxShadowSize) rgba(var(--boxShadowColor));
+        {/block:ifBoxShadow}
+    }
+    
+    .sidebar-title, .sidebar-description, .sidebar-search {
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    
+    .sidebar-description a, .sidebar-pagination a {
+        color: var(--sidebarLinkIconsColor);
+    }
+    
+    .sidebar-description a:hover, .sidebar-navigation a:hover, .sidebar-pagination a:hover {
+        color: var(--bodyLinkHoverColor);
+    }
+    
+    .sidebar-image, .sidebar-image-icon {
+        float:{select:Sidebar Image Position};
+        
+        {block:IfSidebarIconImage}
+        {block:IfNotSidebarImage}
+        position: relative;
+        top: calc(var(--sidebarIconImageSize) / -2);
+        height: calc(var(--sidebarIconImageSize) - var(--sidebarIconImageSize) / 2);
+        {/block:IfNotSidebarImage}
+        {/block:IfSidebarIconImage}
+    }
+
+    .sidebar-image img {
+        width: var(--sidebarImageSize);
+        margin: auto auto 1rem;
+        transition:var(--transitions);
+    }
+    
+    .sidebar-icon-container {
+        position: relative;
+    }
+    
+    .sidebar-image-icon img {
+        width: var(--sidebarIconImageSize);
+        height: var(--sidebarIconImageSize);
+        {block:IfNotSidebarIconSquareStyle}
+            border-radius: 50%;
+        {/block:IfNotSidebarIconSquareStyle}
+        object-fit: cover;
+        margin: auto auto 1rem;
+    }
+    
+    .sidebar-image img:hover,
+    .sidebar-image-icon img:hover {
+        opacity:1;
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    
+    .sidebar-title {
+        margin: 1rem 0;
+        font-family: var(--sidebarTitleFontFamily), Arial, sans-serif;
+        font-weight:var(--sidebarTitleFontWeight);
+        font-style:var(--sidebarTitleFontStyle);
+        text-transform:var(--sidebarTitleTextTransform);
+        font-size:var(--sidebarTitleFontSize);
+        line-height:var(--sidebarTitleLineHeight);
+        letter-spacing: var(--sidebarTitleFontLetterSpacing);
+        word-spacing: var(--sidebarTitleFontWordSpacing);
+        text-align:var(--sidebarTitleTextPosition);
+        color: var(--sidebarTitleColor);
+    }
+    
+    
+    .sidebar-links-description {
+        display: flex;
+        padding: 1rem 0;
+        display:flex;
+        align-content:var(--sidebarLinkIconsPosition);
+        justify-content:var(--sidebarLinkIconsPosition);
+        border-bottom:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {block:IfNotSidebarTitle}
+            border-bottom:0;
+        {/block:IfNotSidebarTitle}
+        
+        
+        {block:IfSidebarIconImage}
+            padding-top: 1rem;
+        {block:IfSidebarIconImage}
+        
+        {block:IfNotSidebarIconImage}
+        {block:IfNotSidebarImage}
+            padding-top: 1rem;
+        {/block:IfNotSidebarImage}
+        {/block:IfNotSidebarIconImage}
+    }
+    
+    .sidebar-description {
+        width:100%;
+        display: flex;
+        color: var(--sidebarTextColor);
+        font-weight:var(--descriptionFontWeight);
+        font-style:var(--descriptionFontStyle);
+        text-transform:var(--descriptionTextTransform);
+        font-size:var(--descriptionFontSize);
+        letter-spacing: var(--descriptionFontLetterSpacing);
+        word-spacing: var(--descriptionFontWordSpacing);
+        line-height:var(--descriptionLineHeight);
+        align-items:var(--descriptionTextVerticalPosition);
+    }
+    
+    .sidebar-description-content {
+        text-align:var(--descriptionTextHorizontalPosition);
+    }
+    
+    .sidebar-navigation {
+        border-left:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {block:IfSidebarLinksText}
+        margin: 0 1rem;
+        {/block:IfSidebarLinksText}
+        {block:IfNotSidebarLinksText}
+        padding:0 1rem;
+        {/block:IfNotSidebarLinksText}
+        {block:IfNotHideDescription}
+            width:23%;
+        {/block:IfNotHideDescription}
+    }
+    
+    .sidebar-navigation .cp {
+        font-size:var(--sidebarLinkIconsSize);
+        color: var(--sidebarLinkIconsColor);
+    }
+    
+    .sidebar-navigation .cp:hover {
+        color: var(--bodyLinkHoverColor);
+    }
+    
+    .sidebar-navigation ul {
+        list-style: none;
+        display:flex;
+        align-content:var(--sidebarLinkIconsPosition);
+        justify-content:center;
+        height: 100%;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    
+    .sidebar-links-text {
+        display: block;
+        box-sizing: border-box;
+    }
+    
+    .sidebar-links-text .sidebar-navigation {
+        width: 100%;
+        margin: 1rem 0;
+        border-left:0;
+    }
+    
+    .sidebar-links-text .sidebar-navigation ul {
+        gap: 0.5rem 1rem;
+        padding: 0 1rem;
+        color: var(--sidebarLinkTextColor);
+        font-weight:var(--sidebarLinkFontWeight);
+        font-style:var(--sidebarLinkFontStyle);
+        text-transform:var(--sidebarLinkTextTransform);
+        font-size:var(--sidebarLinkFontSize);
+        letter-spacing: var(--sidebarLinkFontLetterSpacing);
+        word-spacing: var(--sidebarLinkFontWordSpacing);
+        line-height:var(--sidebarLinkLineHeight);
+        justify-content:var(--sidebarLinkTextPosition);
+    }
+    
+    .sidebar-search {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 1rem;
+        border-bottom:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+    }
+    
+    .sidebar-search input {
+        background-color:var(--sidebarBackgroundColor);
+        color: var(--sidebarTextColor);
+        border: none;
+    }
+    
+    .sidebar-search input:focus {
+        border:none;
+        outline:none;
+    }
+    
+    .sidebar-search input:placeholder {
+        color: var(--sidebarTextColor);
+    }
+    
+    .sidebar-search input:focus::placeholder {
+        color: var(--sidebarLinkIconsColor);
+    }
+    
+    .sidebar-pagination {
+        font-size:var(--paginationLinksFontSize);
+        font-style:var(--paginationLinksFontStyle);
+        font-weight:var(--paginationLinksFontWeight);
+        letter-spacing: var(--paginationFontLetterSpacing);
+        text-transform:var(--paginationLinksTextTransform);
+        word-spacing: var(--paginationFontWordSpacing);
+        padding: 1rem 1.5rem 1rem 1rem;
+        background-color:var(--sidebarSecondaryBackgroundColor);
+    }
+    
+    .sidebar-pagination ul {
+        list-style: none;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    
+    .sidebar-pagination .credit {
+        width: var(--bodyFontSize);
+        height: var(--bodyFontSize);
+    }
+    
+    
+    
+    
+    
+    /* posts */
+    
+    .container-posts, .container-header {
+        width:100%;
+        max-width: calc(var(--postWidth) + 1px);
+        margin: 0 auto;
+        text-align:var(--postsTextPosition);
+        padding: var(--postsPadding);
+        background-color: var(--postsBackgroundColor);
+        line-height:var(--poststLineHeight);
+        {block:ifShowBorders}
+        outline:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {/block:ifShowBorders}
+        
+        {block:ifBoxShadow}
+        -webkit-box-shadow: var(--boxShadowSize) rgba(var(--boxShadowColor));
+        box-shadow: var(--boxShadowSize) rgba(var(--boxShadowColor));
+        {/block:ifBoxShadow}
+    }
+    
+    .container-header {
+        margin-bottom: 2rem;
+    }
+    
+    .container-header-content {
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    
+    .search-result .search_query, .tag-wrapper .tag {
+        font-weight: var(--boldFontWeight);
+        color: var(--boldColor);
+    }
+    
+    .container-posts img {
+        max-width:100%;
+        display:block;
+        height:auto;
+    }
+    
+    .container-posts b, strong {
+        font-weight:var(--boldFontWeight);
+    }
+    
+    .container-posts:not(:last-of-type) {
+        margin-bottom: var(--postsMargin);
+    }
+    
+    
+    /* photosets */
+    [photoset-layout] {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: {select:Photoset Gutter};
+    }
+     
+    [photoset-layout] img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    
+    .photoset-grid {
+        max-width: 100%;
+        width: var(--postWidth);
+        grid-gap: {select:Photoset Gutter};
+    }  
+    
+    .photoset-grid div {
+        cursor: pointer;
+    }
+    
+    
+    
+    /* captions & blockquote */
+    .tumblr_blog {
+        display:inline-block;
+        line-height:var(--bodyLineHeight);
+        margin-right:0.2rem;
+        text-transform:lowercase;
+        font-family: var(--bodyFont), Arial, sans-serif;
+        font-size:var(--bodyFontSize);
+        color:var(--bodyLinkColor);
+        font-weight:var(--boldFontWeight);
+    }
+    
+    .tumblr_blog a {
+        color:var(--bodyLinkColor);
+        font-weight:var(--boldFontWeight);
+        vertical-align:bottom;
+    
+    }
+    
+    .tumblr_blog a:hover {
+        text-decoration:none;
+        color:var(--bodyLinkHoverColor);
+    }
+    
+    /* old captions style */
+    {block:ifNotTumblrCaptions}
+    blockquote { 
+        border-left:0.1rem solid var(--bordersColor);
+        padding-left: 1.5rem;
+        margin: 1rem 1rem;
+    }
+    {/block:ifNotTumblrCaptions}
+    
+    /* tumblr's dashboad captions style */
+    {block:ifTumblrCaptions}
+    blockquote { 
+        border-left:0px solid;
+        padding-left: 0px;
+        margin: 0px;
+    }
+    {/block:ifTumblrCaptions}
+    
+
+    /* custom captions icons */
+    {block:ifCustomCaptionIcon}
+    .caption-user .feather,
+    .ask-user .feather {
+        display:inline-block;
+        vertical-align: middle;
+        width:var(--bodyFontSize);
+        height:var(--bodyFontSize);
+        margin-right: 0.5rem;
+    }
+    {/block:ifCustomCaptionIcon}
+    
+    .caption-user {
+        display: flex;
+        align-items: center;
+    }
+    
+    .caption-user-icon {
+        width:2rem;
+        border-radius: 50%;
+        margin: 0 0.5rem 0.2rem 0;
+    }
+    
+    .caption-user .feather,
+    .ask-user .feather {
+    {block:ifNotCustomCaptionIcon}
+        display:none;
+    {/block:ifNotCustomCaptionIcon}
+        transition:var(--transitions);
+    }
+    
+    .caption-user,
+    .tmblr-attribution a {
+        font-weight:var(--boldFontWeight);
+    }
+    
+    .caption-user a::after {
+        content:none;
+    }
+    
+    .deactive::after {
+        content: '(deactivated)';
+        margin-left: 1em;
+        opacity: 0.75;
+        color: var(--bodyTextColor);
+    }
+    
+    .posts-title {
+        padding: 1rem 1rem 0.5rem;
+    }
+    
+    .caption-content h2, h3, h4, h5, h6 {
+        padding: 0.5rem 0 0.2rem;
+    }
+    
+    .caption {
+        padding: 1rem;
+    }
+    
+    .caption p {
+        padding: 0.4rem 0;
+    }
+    
+    .caption p:first-child {
+        padding: 0.2rem 0;
+    }
+    
+    .caption p:last-child {
+        padding: 0.2rem 0;
+    }
+    
+    /* captions links */
+    .caption a, .caption-content a, figcaption a, .tmblr-attribution a {
+        color:var(--bodyLinkColor);
+    }
+    
+    .caption a:hover, .caption-content a:hover, figcaption a:hover {
+        color:var(--bodyLinkHoverColor);
+    }
+    
+    .container-date a:hover,
+    .container-date-content .show-more-info .cp:hover,
+    .container-date-content .show-more-info:hover {
+        color:var(--bodyLinkHoverColor);
+    }
+    
+    .container-date ul {
+        list-style: none;
+        width:100%;
+    }
+    
+    .container-date ul li {
+        display:inline-block;
+        padding: 0.2rem 0;
+    }
+    
+    .container-date ul li:not(:last-child) {
+        margin-right:1rem;
+    }
+    
+    .more-info-first a:not(:last-child),
+    .more-info-second a:not(:last-child) {
+        margin-right: 1rem;
+    }
+    
+    .container-date-content, .container-more-info {
+        display: grid;
+        align-items: center;
+        justify-content: start;
+        font-weight:var(--dateFontWeight);
+        font-style:var(--dateFontStyle);
+        color:var(--dateTextColor);
+        font-size:var(--dateFontSize);
+        text-transform: var(--dateTextTransform);
+        letter-spacing: var(--dateFontLetterSpacing);
+        word-spacing: var(--dateFontWordSpacing);
+        line-height:var(--dateLineHeight);
+        padding: 1rem;
+        border-top:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+    }
+    
+    .container-date-content {
+        grid-template-columns: repeat(3, 1fr);
+        background-color: var(--datePrimaryBackgroundColor);
+    }
+    
+    .container-show-more-info {
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .container-more-info {
+        grid-template-columns: repeat(2, 1fr);
+        background-color: var(--dateSecondaryBackgroundColor);
+    }
+    
+    .container-date-content a {
+        color: var(--datePrimaryLinkColor);
+    }
+    
+    .container-more-info a {
+        color: var(--dateSecondaryLinkColor);
+    }
+    
+    .container-date-content .date-time {
+        justify-self: end;
+    }
+    
+    .container-date-content .show-more-info {
+        justify-self: start;
+        cursor: pointer;
+    }
+    
+    .container-date-content .show-more-info .cp {
+        color: var(--datePrimaryLinkColor);
+        font-size:var(--dateFontSize);
+    }
+    
+        
+    .container-date-content .pinned-post {
+        justify-self: center;
+    }
+    
+    .container-date-content .pinned-post .cp {
+        margin-left: 0.5rem;
+        font-size:calc(var(--dateFontSize) - 1px);
+    }
+    
+    .container-date-content .pinned-post .cp:hover {
+        color:inherit;
+    }
+    
+    .container-tags {
+        padding: 1rem;
+        box-sizing: border-box;
+        text-align: var(--tagsTextPosition);
+        text-transform: var(--tagsTextTransform);
+        font-style:var(--tagsFontStyle);
+        font-size:var(--tagsFontSize);
+        letter-spacing: var(--tagsFontLetterSpacing);
+        word-spacing: var(--tagsFontWordSpacing);
+        font-weight:var(--tagsFontWeight);
+        line-height:var(--tagsLineHeight);
+        grid-row: 1;
+        grid-column: 1 / 3;
+        border-top:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+    }
+    
+    .container-tags a {
+        color:var(--tagsLinkColor);
+    }
+
+    .container-more-info .more-info-first {
+        display: flex;
+        justify-self: start;
+        grid-row: 2;
+        margin: 0;
+    }
+    
+    .container-more-info .more-info-second {
+        display: flex;
+        justify-self: end;
+        grid-row: 2;
+        text-align: right;
+        margin: 0;
+    }
+    
+    .container-more-info .more-info-second .reblog-link {
+        max-width: 170px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    
+
+    /*   like text   */
+    .like-b {
+        position:relative;
+        display:inline-block;
+        height:1em;
+        padding: 0 0.1rem;
+    }
+    
+    .like-b iframe {
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        z-index:2;
+        opacity:0;
+    }
+    
+    .like-b .liked + .b {
+        color: var(--likedLinkColor);
+        font-weight:var(--boldFontWeight);
+    }
+    
+    .like-b .liked + .b:after {
+        content:'d';
+    }
+    
+    .like-b a:hover {
+        color:var(--bodyLinkHoverColor);
+    }
+    
+    /* asks */
+    .ask {
+        color:var(--dateTextColor);
+        padding: 1rem;
+        background-color: var(--datePrimaryBackgroundColor);
+        {block:ifShowBorders}
+        border-bottom:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {/block:ifShowBorders}
+    }
+    
+    .ask-user {
+        color:var(--datePrimaryLinkColor);
+        font-weight:var(--boldFontWeight);
+        text-transform:lowercase;
+    }
+    
+    .ask-user a {
+        color:var(--datePrimaryLinkColor);
+        font-weight:var(--boldFontWeight);
+    }
+    
+    .ask-user a:hover {
+        color:var(--bodyLinkHoverColor);
+    }
+    
+    .ask-question {
+        display:block;
+        margin: 0 0 0.7rem;
+    }
+    
+    .ask-answer.caption-content::after {
+        content: '';
+        height: 0px;
+    }
+    
+    /*audio */
+    .audio {
+        display:flex;
+    {block:ifShowBorders}
+        border-bottom:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+    {/block:ifShowBorders}
+        align-items: center;
+        position: relative;
+    }
+    
+    .album-art {
+        z-index: 1;
+        display: inline-block;
+        vertical-align: middle;
+        float: left;
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .button {
+        width: 3rem;
+        height: 3rem;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        margin: 0.7rem;
+    }
+    
+    .audiobox {
+        background-color: #f2f2f2;
+        z-index: 3;
+        position: absolute;
+        margin: 2.8rem;
+        border-radius: 50%;
+    }
+    
+    .audio_trackinfo {
+        max-height: 7.4rem;
+        min-height: 7.4rem;
+        display: flex;
+        flex: 4;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.5rem;
+        padding: 1rem;
+        background-color: var(--backgroundAskColor);
+        color:var(--askTextColor);
+    }
+    
+    .audio_trackname {
+        font-weight:var(--boldFontWeight);
+        color:var(--askLinkColor);
+        text-align:var(--postsTextPosition);
+        font-size:1.6rem;
+    }
+    
+    .spotify_audio_player {
+        max-width: 100%;
+        width: var(--postWidth);
+        height: 80px;
+    }
+    
+    
+    /* postnotes */
+    .post-notes {
+        list-style-type: none;
+        /*margin: var(--postsMargin) 0;*/
+        font-family: var(--bodyFont), Arial, sans-serif;
+        font-size:var(--bodyFontSize);
+        color:var(--bodyTextColor);
+        background-color:var(--postsBackgroundColor);
+        text-align:center;
+    }
+    
+    .post-notes ol li, .post-notes ul li {
+        list-style-type: none;
+        margin:0;
+        line-height: calc(var(--postsLineHeight) + 0.5rem);
+    }
+    
+    .post-notes ol li.like::before {
+        content: '\e12c';
+        font-family:'saturnicons';
+        font-size:calc(var(--bodyFontSize) - 40%);
+        margin-right:0.7rem;
+        display:inline-block;
+        vertical-align:middle;
+        position:relative;
+        color: var(--bodyLinkColor);
+    }
+    
+    .post-notes ol li.reblog::before {
+        content: '\e1f5';
+        font-family:'saturnicons';
+        font-size:calc(var(--bodyFontSize) - 40%);
+        margin-right:0.7rem;
+        display:inline-block;
+        vertical-align:middle;
+        position:relative;
+        color: var(--bodyLinkColor);
+    }
+    
+    .post-notes ol li.original_post::before {
+        content: '\e213';
+        font-family:'saturnicons';
+        font-size:calc(var(--bodyFontSize) - 40%);
+        bottom:0.5rem;
+        margin-right:0.7rem;
+        display:inline-block;
+        vertical-align:middle;
+        position:relative;
+        color: var(--bodyLinkColor);
+    }
+    
+    
+    .post-notes ol li:hover:before {
+        color:var(--bodyLinkHoverColor);
+    }
+    
+    .post-notes ol li .more_notes_link a::before {
+        content: '';
+    }
+    
+    
+    ol.notes {
+        list-style:none;
+        color:var(--bodyTextColor);
+        padding: 2rem;
+    }
+    
+    ol.notes img { 
+        display: none;
+    }
+    
+    /* quote */
+    .type-quote {
+        padding:1rem 2rem;
+        font-size:var(--postsTitlesFontSize);
+        text-transform:var(--postsTitlesTextTransform);
+        color:var(--boldColor);
+        font-weight:var(--boldFontWeight);
+        text-align:var(--postsTextPosition);
+    }
+    
+    .type-quote blockquote {
+        padding: 0 0 1rem;
+    }
+    
+    .quote-source {
+        font-weight: normal;
+        font-size: var(--bodyFontSize);
+    }
+     
+    .quote-source::before {
+        content: '';
+        width: 1.5rem;
+        height: 0.1rem;
+        margin-right:1rem;
+        display:inline-block;
+        vertical-align:middle;
+        position:relative;
+        background-color: var(--bordersColor);
+    }
+
+    /* link */
+    
+    .link-image img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        margin-bottom:0.5rem;
+    }
+     
+    .container-link-txt, .container-link-host {
+        padding:0.5rem 1rem;
+    }
+    
+    .container-link-txt {
+        font-style: italic;
+    }
+     
+    /* chat */
+    .type-chat .chat-lines li::before {
+        content: '';
+        margin: 0;
+        padding: 0;
+    }
+    
+    .label {
+        font-weight:var(--boldFontWeight);
+        color:var(--boldColor);
+    }
+     
+    .line {
+        padding: 0px 0px 0.5rem;
+        margin: 0px 0px 0.5rem;
+    }
+     
+     
+    p.npf_chat {
+        font-size:var(--bodyFontSize);
+        font-family: var(--bodyFont), Arial, sans-serif;
+        list-style:none;
+    }
+    
+    #btn-mobile, #mobile-pagination {
+        overflow:hidden;
+        visibility: hidden;
+        display: none;
+    }
+    
+
+/*     DO NOT REMOVE     */
+        .mcredito {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position:fixed;
+            right:5px;
+            bottom:10px;
+            padding:8px 12px;
+            background-color:var(--sidebarPrimaryBackgroundColor);
+            {block:ifBoxShadow}
+            -webkit-box-shadow: var(--boxShadowSize) rgba(var(--boxShadowColor));
+            box-shadow: var(--boxShadowSize) rgba(var(--boxShadowColor));
+            {/block:ifBoxShadow}
+            {block:ifShowBorders}
+            outline:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+            {/block:ifShowBorders}
+        }
+        
+        .mcredito a {
+            margin:0;
+            font-weight:var(--boldFontWeight);
+            text-transform:lowercase;
+            text-align:center;
+            color:var(--bodyLinkColor);
+        }
+        
+        .mcredito a:hover {
+            color:var(--bodyLinkHoverColor);
+        }
+        
+        .dot-separator {
+            width: 0.3rem;
+            height: 0.3rem;
+            margin:0.1rem 0.5rem;
+            display:inline-block;
+            border-radius: 50%;
+            background-color: var(--bodyLinkColor);
+        }
+        
+    
+    /*STYLES FOR MOBILE*/
+    
+    @media (max-width:950px) {
+        
+        /*mobile container*/
+        .theme-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            gap: 3rem;
+            justify-content: center;
+            margin:0;
+        }
+
+        .sidebar {
+            width: 90%;
+            height: auto;
+            justify-content: center;
+            max-width: calc(var(--postWidth) + 1px);
+            margin: 10rem auto 5rem;
+        }
+        
+        .sidebar-content {
+            width: 90%;
+            position: static;
+        }
+        
+        .sidebar-navigation {
+            width: 50%;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .sidebar-image {
+            display: none;
+            overflow:hidden;
+            visibility: hidden;
+        }
+        
+        .photoset-grid {
+            width:100%;
+            max-width: var(--postWidth);
+            grid-gap: {select:Photoset Gutter};
+            margin: 0 auto;
+        }
+        
+        .mcredito {
+            width: 100%;
+            right:0px;
+            bottom:0px;
+            padding:15px;
+        }
+        
+        
+        
+        /* menu mobile */
+          
+          #mobile-pagination {
+            visibility: visible;
+            display: inline-block;
+            margin-right:1rem;
+          }
+      
+    }
+    
+        /* tumblr controls */
+        {block:ifCustomControls}
+        .controls-button {
+           position: fixed;
+           cursor: help;
+           top: 20px;
+           right: 2rem;
+           z-index: 1000;
+           cursor: pointer;
+          right:1.5rem;
+        }
+         
+        .tmblr-iframe {
+           z-index: 999999999!important;
+           opacity: 0;
+           visibility: hidden;
+           -webkit-transition: all 0.5s;
+           -moz-transition: all 0.5s;
+           -ms-transition: all 0.5s;
+           -o-transition: all 0.5s;
+           transition: all 0.5s;
+        }
+         
+        body.controls-click .tmblr-iframe {
+           opacity: 1;
+           margin-right: 4rem;
+           visibility: visible;
+           -webkit-transition: all 0.5s;
+           -moz-transition: all 0.5s;
+           -ms-transition: all 0.5s;
+           -o-transition: all 0.5s;
+           transition: all 0.5s;
+        }
+         
+         
+        .controls-button .cp, 
+        #btn-mobile .cp {
+            color: var(--tumblrControlsIconColor);
+            font-size:1.5rem;
+        }
+
+        {/block:ifCustomControls}
+        
+        {block:ifNotDisableSwitchThemeColor}
+        /*     css for dark theme     */
+        .theme-switch input {
+            display: none;
+        }
+        
+        .theme-switch-svg {
+            cursor: pointer;
+            width: var(--bodyFontSize);
+            height: var(--bodyFontSize);
+        }
+        
+        .theme-switch-svg svg {
+            width: var(--bodyFontSize);
+            height: var(--bodyFontSize);
+            stroke: var(--bodyTextColor);
+            cursor: pointer;
+        }
+        {/block:ifNotDisableSwitchThemeColor}
+
+
+    /* Tumblr: Custom CSS */
+    {CustomCSS}
+    </style>
+</head>
+
+<body>
+    <div class="theme-container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                {block:IfNotSidebarIconImage}
+                {block:IfSidebarImage}
+                <div class="sidebar-image">
+                     <img src="{image:Sidebar Image}" />
+                </div>
+                {/block:IfSidebarImage}
+                {/block:IfNotSidebarIconImage}
+                
+                {block:IfNotSidebarImage}
+                {block:IfSidebarIconImage}
+                <div class="sidebar-icon-container">
+                    <div class="sidebar-image-icon">
+                        <img src="{image:Sidebar Image}" />
+                    </div>
+                </div>
+                {/block:IfSidebarIconImage}
+                {/block:IfNotSidebarImage}
+                <span class="clearfix"></span>
+
+                <div class="sidebar-links-description {block:IfSidebarLinksText}sidebar-links-text{/block:IfSidebarLinksText}">
+                {block:IfNotHideDescription}
+                    <div class="sidebar-description">
+                        <div class="sidebar-description-content">
+                             {Description}
+                        </div>
+                    </div>
+                {/block:IfNotHideDescription}
+    
+                    <nav class="sidebar-navigation {block:IfSidebarLinksText}sidebar-links-text{/block:IfSidebarLinksText}">
+                        <ul>
+                            <li>
+                                <a href="{text:Home URL}">                             
+                                    {block:IfNotSidebarLinksText}
+                                        <span class="cp cp-{text:Home Icon}" title="{text:Home Text}"></span>
+                                    {/block:IfNotSidebarLinksText}
+                                    {block:IfSidebarLinksText}
+                                        {text:Home Text}
+                                    {/block:IfSidebarLinksText}
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="{text:Ask URL}">
+                                    {block:IfNotSidebarLinksText}
+                                        <span class="cp cp-{text:Ask Icon}" title="{text:Ask Text}"></span>
+                                    {/block:IfNotSidebarLinksText}
+                                    {block:IfSidebarLinksText}
+                                        {text:Ask Text}
+                                    {/block:IfSidebarLinksText}
+                                </a>
+                            </li>
+                            
+                            {block:ifSubmitLink}
+                            <li>
+                                <a href="{text:Submit Link}">
+                                    {text:Submit Text}
+                                </a>
+                            </li>
+                            {/block:ifSubmitLink}
+                            
+                            {block:ifSidebarLink1}
+                            <li>
+                                <a href="{text:Sidebar Link 1 URL}">
+                                    {block:IfNotSidebarLinksText}
+                                        <span class="cp cp-{text:Sidebar Link 1 Icon}" title="{text:Sidebar Link 1 Text}"></span>
+                                    {/block:IfNotSidebarLinksText}
+                                    {block:IfSidebarLinksText}
+                                        {text:Sidebar Link 1 Text}
+                                    {/block:IfSidebarLinksText}
+                                </a>
+                            </li>
+                            {/block:ifSidebarLink1}
+                            
+                            {block:ifSidebarLink2}
+                            <li>
+                                <a href="{text:Sidebar Link 2 URL}">
+                                    {block:IfNotSidebarLinksText}
+                                        <span class="cp cp-{text:Sidebar Link 2 Icon}" title="{text:Sidebar Link 2 Text}"></span>
+                                    {/block:IfNotSidebarLinksText}
+                                    {block:IfSidebarLinksText}
+                                        {text:Sidebar Link 2 Text}
+                                    {/block:IfSidebarLinksText}
+                                </a>
+                            </li>
+                            {/block:ifSidebarLink2}
+                            
+                            {block:ifSidebarLink3}
+                            <li>
+                                <a href="{text:Sidebar Link 3 URL}">
+                                    {block:IfNotSidebarLinksText}
+                                        <span class="cp cp-{text:Sidebar Link 3 Icon}" title="{text:Sidebar Link 3 Text}"></span>
+                                    {/block:IfNotSidebarLinksText}
+                                    {block:IfSidebarLinksText}
+                                        {text:Sidebar Link 3 Text}
+                                    {/block:IfSidebarLinksText}
+                                </a>
+                            </li>
+                            {/block:ifSidebarLink3}
+                            
+                            {block:ifSidebarLink4}
+                            <li>
+                                <a href="{text:Sidebar Link 4 URL}">
+                                    {block:IfNotSidebarLinksText}
+                                        <span class="cp cp-{text:Sidebar Link 4 Icon}" title="{text:Sidebar Link 4 Text}"></span>
+                                    {/block:IfNotSidebarLinksText}
+                                    {block:IfSidebarLinksText}
+                                        {text:Sidebar Link 4 Text}
+                                    {/block:IfSidebarLinksText}
+                                </a>
+                            </li>
+                            {/block:ifSidebarLink4}
+                            
+                            {block:HasPages}
+                            {block:Pages}
+                            <li>
+                                <a href="{URL}">{Label}</a>
+                            </li>
+                            {/block:Pages}
+                            {/block:HasPages}
+                        </ul>
+                    </nav>
+                </div>
+                
+                
+                {block:IfSidebarTitle}
+                <div class="sidebar-title">
+                    {Title}
+                </div>
+                {/block:IfSidebarTitle}
+
+                <form action="javascript:return false" method="get" class="search sidebar-search">
+                    <input type="text" name="q" value="{SearchQuery}" placeholder="{lang:Search}" />
+                </form>
+                <nav class="sidebar-pagination">
+                    <ul>
+                        <ul>
+                            {block:PreviousPage}<li><a href="{PreviousPage}">{lang:Previous page}</a></li>{/block:PreviousPage}
+                            {block:NextPage}<li><a href="{NextPage}">{lang:Next page}</a></li>{/block:NextPage}
+                        </ul>
+                        <ul>
+                            <li>
+                            {block:ifNotDisableSwitchThemeColor}
+                            <div class="theme-switch-wrapper">
+                                <label class="theme-switch" for="checkbox">
+                                    <input type="checkbox" id="checkbox" />
+                                    <div class="theme-switch-svg"  title="Change Theme Color">
+                                    </div>
+                                </label> 
+                            </div>
+                            {/block:ifNotDisableSwitchThemeColor}
+                            </li>
+                        </ul>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="container">
+                {block:SearchPage}
+                <div class="search-page container-header">
+                    {block:SearchResults}
+                    <p class="search-result container-header-content">{lang:Search results for SearchQuery 2}</p>
+                    {/block:SearchResults}
+
+                    {block:NoSearchResults}
+                    <p class="search-result container-header-content">{lang:Sorry no results for SearchQuery 2}</p>
+                    {/block:NoSearchResults}
+                </div>
+                {/block:SearchPage}
+
+                {block:TagPage}
+                <div class="tag-page container-header">
+                    <p class="tag-wrapper container-header-content">{lang:Showing TagResultCount posts tagged Tag 2}</p>
+                </div>
+                {/block:TagPage}
+
+            {block:posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
+            <article class="container-posts" id="{PostID}" post-type="{PostType}">
+                {block:Text}
+                <div class="type-text post">
+                    {block:Title}
+                    <h1 class="posts-title">
+                        <a href="{Permalink}">{Title}</a>
+                    </h1>
+                    {/block:Title}
+                
+                        <!-- captions -->
+                    {block:ifTumblrCaptions}
+                        {block:NotReblog}
+                            <div class="caption">
+                                {block:IfUsernameOriginalPost}
+                                <div class="caption-user">
+                                    {block:ifCaptionAvatar}
+                                    {block:ifNotCustomCaptionIcon}
+                                    <img src="{PortraitURL-64}" class="caption-user-icon">
+                                    {/block:ifNotCustomCaptionIcon}
+                                    {/block:ifCaptionAvatar}
+                                    <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Name}</a>
+                                </div>
+                                {/block:IfUsernameOriginalPost}
+                                <div class="caption-content">{Body}</div>
+                            </div>
+                        {/block:NotReblog} 
+                        {block:RebloggedFrom}
+                                {block:Reblogs}
+                                    <div class="caption">
+                                        <div class="caption-user {block:IsDeactivated}deactive{/block:IsDeactivated}">
+                                            {block:ifCaptionAvatar}
+                                            {block:ifNotCustomCaptionIcon}
+                                            <img src="{ReblogRootPortraitURL-64}" class="caption-user-icon">
+                                            {/block:ifNotCustomCaptionIcon}
+                                            {/block:ifCaptionAvatar}
+                                            <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Username}</a>
+                                        </div>
+                                        <div class="caption-content">{Body}</div>
+                                    </div>
+                                {/block:Reblogs}
+                        {/block:RebloggedFrom}
+                    {/block:ifTumblrCaptions}
+                    
+                    {block:ifNotTumblrCaptions}
+                    <div class="caption caption-content">
+                        {Body}
+                    </div>
+                    {/block:ifNotTumblrCaptions}
+                </div>
+                {/block:Text}
+
+                {block:Photo}
+                <figure class="type-photo post">
+                    {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />{LinkCloseTag}
+                    {block:Caption}
+                    {block:ifTumblrCaptions}
+                        {block:NotReblog}
+                            <figcaption class="caption">
+                                    {block:IfUsernameOriginalPost}
+                                    {block:NotReblog}
+                                        <div class="caption-user">
+                                            {block:ifCaptionAvatar}
+                                            {block:ifNotCustomCaptionIcon}
+                                            <img src="{PortraitURL-64}" class="caption-user-icon">
+                                            {/block:ifNotCustomCaptionIcon}
+                                            {/block:ifCaptionAvatar}
+                                            <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Name}</a>
+                                        </div>
+                                    {/block:NotReblog}
+                                    {/block:IfUsernameOriginalPost}
+                                <div class="caption-content">{Caption}</div>
+                            </figcaption>
+                        {/block:NotReblog} 
+                        {block:Rebloggedfrom}
+                                {block:Reblogs}
+                                    <div class="caption">
+                                        <div class="caption-user {block:IsDeactivated}deactive{/block:IsDeactivated}">
+                                            {block:ifCaptionAvatar}
+                                            <img src="{ReblogRootPortraitURL-64}" class="caption-user-icon">
+                                            {/block:ifCaptionAvatar}
+                                            <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Username}</a>
+                                        </div>
+                                        <figcaption class="caption-content">{Body}</figcaption>
+                                    </div>
+                                {/block:Reblogs}
+                        {/block:RebloggedFrom}
+                    {/block:ifTumblrCaptions}
+                    
+                    {block:ifNotTumblrCaptions}
+                    <figcaption class="caption caption-content">
+                        {Caption}
+                    </figcaption>
+                    {/block:ifNotTumblrCaptions}
+                    {/block:Caption}
+                </figure>
+                {/block:Photo}
+
+                {block:Photoset}
+                <figure class="type-photoset post">
+                    <div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>
+                    {block:Caption}
+                    {block:ifTumblrCaptions}
+                        {block:NotReblog}
+                            <figcaption class="caption">
+                                {block:IfUsernameOriginalPost}
+                                {block:NotReblog}
+                                    <div class="caption-user">
+                                        {block:ifCaptionAvatar}
+                                        {block:ifNotCustomCaptionIcon}
+                                        <img src="{PortraitURL-64}" class="caption-user-icon">
+                                        {/block:ifNotCustomCaptionIcon}
+                                        {/block:ifCaptionAvatar}
+                                        <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Name}</a>
+                                    </div>
+                                {/block:NotReblog}
+                                {/block:IfUsernameOriginalPost}
+                                <div class="caption-content">{Caption}</div>
+                            </figcaption>
+                        {/block:NotReblog} 
+                        {block:Rebloggedfrom}
+                                {block:Reblogs}
+                                    <div class="caption">
+                                        <div class="caption-user {block:IsDeactivated}deactive{/block:IsDeactivated}">
+                                            {block:ifCaptionAvatar}
+                                            {block:ifNotCustomCaptionIcon}
+                                            <img src="{ReblogRootPortraitURL-64}" class="caption-user-icon">
+                                            {/block:ifNotCustomCaptionIcon}
+                                            {/block:ifCaptionAvatar}
+                                            <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Username}</a>
+                                        </div>
+                                        <figcaption class="caption-content">{Body}</figcaption>
+                                    </div>
+                                {/block:Reblogs}
+                        {/block:RebloggedFrom}
+                    {/block:ifTumblrCaptions}
+                    
+                    {block:ifNotTumblrCaptions}
+                    <figcaption class="caption caption-content">
+                        {Caption}
+                    </figcaption>
+                    {/block:ifNotTumblrCaptions}
+                    {/block:Caption}
+                </figure>
+                {/block:Photoset}
+
+                {block:Quote}
+                <div class="type-quote post">
+                    <blockquote>{Quote}</blockquote>
+
+                    {block:Source}
+                    <cite class="quote-source">
+                        {Source}
+                    </cite>
+                    {/block:Source}
+                </div>
+                {/block:Quote}
+
+                {block:Link}
+                <div class="type-link post">
+                    <div class="link-content caption">
+                        <a href="{URL}" class="link-wrap">
+                        {block:Thumbnail}<img class="link-image" src="{Thumbnail-HighRes}">{/block:Thumbnail}
+                        </a>
+                        <div class="container-link">
+                            <h3><a href="{URL}" class="link-wrap">{Name}</a></h3>
+                        
+                            {block:Excerpt}<div class="container-link-txt">{Excerpt}</div>{/block:Excerpt}
+                        <a href="{URL}" class="link-wrap">
+                            {block:Host}<div class="container-link-host">{Host}</div>{/block:Host}
+                        </a>
+                        </div>
+                    </div>
+                    
+                {block:Description}
+                {block:ifTumblrCaptions}
+                    {block:NotReblog}
+                        <div class="caption">
+                            <div class="caption-content">{Description}</div>
+                        </div>
+                    {/block:NotReblog}
+                {block:Rebloggedfrom}
+                        {block:Reblogs}
+                            <div class="caption">
+                                <div class="caption-user {block:IsDeactivated}deactive{/block:IsDeactivated}">
+                                    {block:ifCaptionAvatar}
+                                    {block:ifNotCustomCaptionIcon}
+                                    <img src="{ReblogRootPortraitURL-64}" class="caption-user-icon">
+                                    {/block:ifNotCustomCaptionIcon}
+                                    {/block:ifCaptionAvatar}
+                                    <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Username}</a>
+                                </div>
+                                <div class="caption-content">{Body}</div>
+                            </div>
+                        {/block:Reblogs}
+                {/block:RebloggedFrom}
+                {/block:ifTumblrCaptions}
+                
+                {block:ifNotTumblrCaptions}
+                <div class="caption caption-content">
+                    {Description}
+                </div>
+                {/block:ifNotTumblrCaptions}
+                {/block:Description}
+                </div>
+                {/block:Link}
+
+                {block:Chat}
+                <div class="type-chat post">
+                    {block:Title}
+                        <h2 class="posts-title"><a href="{Permalink}">{Title}</a></h2>
+                    {/block:Title}
+                    <div class="caption">
+                        {block:Lines}
+                            {block:Label}
+                            <div class="label">{Label}</div>
+                            {/block:Label}
+                            <div class="line">{Line}</div>
+                        {/block:Lines}
+                    </div>
+                </div>
+                {/block:Chat}
+
+                {block:Audio}
+                <div class="type-audio post">
+                    <div class="audio">
+                        <div class="audiobox">
+                            <div class="button">
+                                {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+                            </div>
+                        </div>
+                        <div class="album-art">
+                        {block:AlbumArt}
+                            <img src="{AlbumArtURL}" />
+                        {/block:AlbumArt}
+                        </div>
+                    
+                        {block:TrackName}
+                        <div class="audio_trackinfo">
+                            <div class="audio_trackname">{TrackName}</div>
+                            {block:Artist}<div class="audio_artist">{Artist}</div>{/block:Artist}
+                            {block:Album}<div class="audio_album">{Album}</div>{/block:Album}
+                        </div>
+                        {/block:TrackName}
+                    </div>
+                    {block:Caption}
+                    {block:ifTumblrCaptions}
+                        {block:NotReblog}
+                            <div class="caption">
+                                {block:IfUsernameOriginalPost}
+                                {block:NotReblog}
+                                    <div class="caption-user">
+                                        {block:ifCaptionAvatar}
+                                        {block:ifNotCustomCaptionIcon}
+                                        <img src="{PortraitURL-64}" class="caption-user-icon">
+                                        {/block:ifNotCustomCaptionIcon}
+                                        {/block:ifCaptionAvatar}
+                                        <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Name}</a>
+                                    </div>
+                                {/block:NotReblog}
+                                {/block:IfUsernameOriginalPost}
+                                <div class="caption-content">{Caption}</div>
+                            </div>
+                        {/block:NotReblog} 
+                        {block:Rebloggedfrom}
+                                {block:Reblogs}
+                                    <div class="caption">
+                                        <div class="caption-user {block:IsDeactivated}deactive{/block:IsDeactivated}">
+                                            {block:ifCaptionAvatar}
+                                            {block:ifNotCustomCaptionIcon}
+                                            <img src="{ReblogRootPortraitURL-64}" class="caption-user-icon">
+                                            {/block:ifNotCustomCaptionIcon}
+                                            {/block:ifCaptionAvatar}
+                                            <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Username}</a>
+                                        </div>
+                                        <div class="caption-content">{Body}</div>
+                                    </div>
+                                {/block:Reblogs}
+                        {/block:RebloggedFrom}
+                    {/block:ifTumblrCaptions}
+                    
+                    {block:ifNotTumblrCaptions}
+                    <div class="caption caption-content">
+                        {Caption}
+                    </div>
+                    {/block:ifNotTumblrCaptions}
+                    {/block:Caption}
+                </div>
+                {/block:Audio}
+
+                {block:Video}
+                <div class="type-video post video">
+                    {Video-500}
+                {block:Caption}
+                {block:ifTumblrCaptions}
+                    {block:NotReblog}
+                        <div class="caption">
+                            {block:IfUsernameOriginalPost}
+                            {block:NotReblog}
+                                <div class="caption-user">
+                                    {block:ifCaptionAvatar}
+                                    {block:ifNotCustomCaptionIcon}
+                                    <img src="{ReblogRootPortraitURL-64}" class="caption-user-icon">
+                                    {/block:ifNotCustomCaptionIcon}
+                                    {/block:ifCaptionAvatar}
+                                    <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Name}</a>
+                                </div>
+                            {/block:NotReblog}
+                            {/block:IfUsernameOriginalPost}
+                            <div class="caption-content">{Caption}</div>
+                        </div>
+                    {/block:NotReblog} 
+                    {block:Rebloggedfrom}
+                            {block:Reblogs}
+                                <div class="caption">
+                                    <div class="caption-user {block:IsDeactivated}deactive{/block:IsDeactivated}">
+                                        {block:ifCaptionAvatar}
+                                        {block:ifNotCustomCaptionIcon}
+                                        <img src="{ReblogRootPortraitURL-64}" class="caption-user-icon">
+                                        {/block:ifNotCustomCaptionIcon}
+                                        {/block:ifCaptionAvatar}
+                                        <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Username}</a>
+                                    </div>
+                                    <div class="caption-content">{Body}</div>
+                                </div>
+                            {/block:Reblogs}
+                    {/block:RebloggedFrom}
+                {/block:ifTumblrCaptions}
+                
+                {block:ifNotTumblrCaptions}
+                <div class="caption caption-content">
+                    {Caption}
+                </div>
+                {/block:ifNotTumblrCaptions}
+                {/block:Caption}
+                </div>
+                {/block:Video}
+
+
+                {block:Answer}
+                <div class="type-ask">
+                    <div class="ask">
+                        <span class="ask-question">
+                            {Question}
+                        </span>
+                        <span class="clearfix"></span>
+    
+                        <span class="ask-user">
+                            {lang:Asked by Asker 2}
+                        </span>
+                    </div>
+                    {block:Answerer}
+                    <div class="caption">
+                    {block:ifTumblrCaptions}
+                        <div class="caption-user {block:IsDeactivated}deactive{/block:IsDeactivated}">
+                            <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Answerer}</a>
+                        </div>
+                    {/block:ifTumblrCaptions}
+                        <div class="ask-answer caption-content">
+                            {Answer}
+                        </div>
+                    </div>
+                    {/block:Answerer}
+                    {block:ifTumblrCaptions}
+                    {block:NotReblog}
+                        <div class="caption">
+                            {block:IfUsernameOriginalPost}
+                            {block:NotReblog}
+                                <div class="caption-user">
+                                    {block:ifCaptionAvatar}
+                                    {block:ifNotCustomCaptionIcon}
+                                    <img src="{PortraitURL-64}" class="caption-user-icon">
+                                    {/block:ifNotCustomCaptionIcon}
+                                    {/block:ifCaptionAvatar}
+                                    <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Name}</a>
+                                </div>
+                            {/block:NotReblog}
+                            {/block:IfUsernameOriginalPost}
+                            <div class="caption-content">{Replies}</div>
+                        </div>
+                    {/block:NotReblog}
+                    {block:Rebloggedfrom}
+                        {block:Reblogs}
+                            <div class="caption">
+                                <div class="caption-user {block:IsDeactivated}deactive{/block:IsDeactivated}">
+                                    {block:ifCaptionAvatar}
+                                    {block:ifNotCustomCaptionIcon}
+                                    <img src="{ReblogRootPortraitURL-64}" class="caption-user-icon">
+                                    {/block:ifNotCustomCaptionIcon}
+                                    {/block:ifCaptionAvatar}
+                                    <a target="_blank" href="{Permalink}"><i data-feather="user" class="feather"></i>{Username}</a>
+                                </div>
+                                <div class="caption-content">{Body}</div>
+                            </div>
+                        {/block:Reblogs}
+                    {/block:RebloggedFrom}
+                    {/block:ifTumblrCaptions}
+                    
+                    {block:ifNotTumblrCaptions}
+                    <div class="caption caption-content">
+                        {Replies}
+                    </div>
+                    {/block:ifNotTumblrCaptions}
+                </div>
+                {/block:Answer}
+                
+                {block:Date}
+                <div class="container-date">
+                    <div class="container-date-content">
+                        <div class="show-more-info toggle-tags">
+                            {block:IfDisableShowMoreInfo}
+                                <a href="{Permalink}" class="date-time" title="{timeago}"><span class="time-ago">{TimeStamp}</span></a>
+                            {/block:IfDisableShowMoreInfo}
+                        
+                            {block:IfNotDisableShowMoreInfo}
+                            {block:IfShowMoreInfoText}
+                                Show more info
+                            {/block:IfShowMoreInfoText}
+                            {block:IfNotShowMoreInfoText}
+                                <span title="Show more info" class="cp cp-add-o"></span>
+                            {/block:IfNotShowMoreInfoText}
+                            {/block:IfNotDisableShowMoreInfo}
+                        </div>
+                        
+                        <div class="pinned-post">
+                        {block:PinnedPostLabel}
+                            {PinnedPostLabel} <span class="cp cp-pin-o"></span>
+                        {/block:PinnedPostLabel}
+                        </div>
+
+                            {block:IfNotDisableShowMoreInfo}
+                                <a href="{Permalink}" class="date-time" title="{timeago}"><span class="time-ago">{TimeStamp}</span>
+                                </a>
+                            {/block:IfNotDisableShowMoreInfo}
+                            
+                            {block:IfDisableShowMoreInfo}
+                                <a class="note-count date-time" href="{Permalink}">
+                                    <span class="notecount" title="{NoteCountWithLabel}">{NoteCount}</span>
+                                </a>
+                            {/block:IfDisableShowMoreInfo}
+                    </div>
+                    
+                    <div class="container-show-more-info">
+                        {block:HasTags}
+                            <ul class="container-tags">
+                                {block:Tags}<li class="container-tags-info"><a href="{TagURL}">#{Tag}</a> </li>{/block:Tags}
+                            </ul>
+                        {/block:HasTags}
+                        <div class="container-more-info">
+                            <div class="more-info-first">
+                                    <a target="_blank" href="{ReblogURL}" target="_blank" title="Reblog this post"> reblog</a>
+                            
+                                    <a class="like-b" href="#" title="Like this post">
+                                    {LikeButton}<span class="b">like</span>
+                                    </a>
+                            </div>
+                            <div class="more-info-second">
+                                {block:IfNotDisableShowMoreInfo}
+                                <a class="note-count" href="{Permalink}">
+                                    <span class="notecount" title="{NoteCountWithLabel}">{NoteCount}</span>
+                                </a>
+                                {/block:IfNotDisableShowMoreInfo}
+                        
+                                <div class="reblog-link">
+                            {block:RebloggedFrom}
+                                <a target="_blank" href="{ReblogParentURL}" title="{lang:Reblogged from} {ReblogParentName}">{ReblogParentName}</a>
+                                <a target="_blank" href="{ReblogRootURL}" title="{lang:Originally from ReblogRootName}">{ReblogRootName}</a>
+                            {/block:RebloggedFrom}
+                            {block:NotReblog}
+                                <a target="_blank" href="{Permalink}" title="Original post">{Name}</a>
+                            {/block:NotReblog}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/block:Date}
+            </article>
+                {block:PostNotes}
+                <div class="post-notes container-posts">
+                    {PostNotes}
+                </div>
+                {/block:PostNotes}
+            {/block:Posts}
+        </main>
+
+        <div class="mcredito">
+        {block:Pagination}
+            <div id="mobile-pagination">
+                {block:PreviousPage}<a href="{PreviousPage}">{lang:Previous page}</a> <span class="dot-separator"></span> {/block:PreviousPage}
+                {block:NextPage}<a href="{NextPage}">{lang:Next page}</a>{/block:NextPage} <span class="dot-separator"></span>
+            </div>
+        {/block:Pagination}
+            <a class="scrolltop" href="javascript:;" id="scrollToTop" title="Scroll to top">
+                <i data-feather="arrow-up" class="feather"></i>
+            </a>
+            <a href="http://maziekeen.tumblr.com/" target="_blank">maziekeen</a>
+        </div>
+    </div>
+    
+    <!-- top right icon for custom tumblr controls -->
+    {block:ifCustomControls}
+        <div title="Tumblr Controls" class="controls-button"><span class="cp cp-cog-o"></span></div>
+    {/block:ifCustomControls}
+    
+
+{block:ifNotDisableSwitchThemeColor}
+<!-- scripts for dark theme -->
+<script type="text/javascript">
+
+// Get the div where the icons will be added
+const themeIcon = document.querySelector('.theme-switch-svg');
+
+// Get the current theme from local storage
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+// Get the theme toggle input
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+
+// Check for saved user preference and set the icons for the respective theme accordingly
+if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    toggleSwitch.checked = true;
+    themeIcon.innerHTML = '<span class="cp cp-sun"></span>';
+} else {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    toggleSwitch.checked = false;
+    themeIcon.innerHTML = '<span class="cp cp-moon-o"></span>';
+}
+
+
+// Function that will switch the theme based on the if the theme toggle is checked or not
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.innerHTML = '<span class="cp cp-sun"></span>';
+        toggleSwitch.checked = true;
+      themeIcon.innerHTML = '<span class="cp cp-sun"></span>';
+    } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            themeIcon.innerHTML = '<span class="cp cp-moon-o"></span>';
+            toggleSwitch.checked = false;
+        }    
+}
+
+// Add an event listener to the theme toggle, which will switch the theme
+toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+{/block:ifNotDisableSwitchThemeColor}
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://static.tumblr.com/i5s2zks/9Acok8oo2/bct-timeago.min.js"></script> <!-- time stamp style -->
+    <script src="https://unpkg.com/popper.js@1"></script> <!-- tooltips -->
+    <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> <!-- tooltips -->
+    <script src="//static.tumblr.com/fwgzvyf/Oj1o08f6h/shythemes.vr.js"></script>  <!-- resize videos -->
+    <script src="//npf-images-v3.github.io/script.js"></script> <!-- npf images readjustment -->
+    <script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script> <!-- photosets -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script> <!-- smooth scroll -->
+    <script src="https://static.tumblr.com/ikeq9mi/DfYl6o46t/scrolltotop.min.js"></script>  <!-- scroll to top -->
+    
+    <!-- masonry navigation -->
+    <script src="https://static.tumblr.com/0siu224/Ljlqmh1nv/masonry.pkgd.min.js"></script>
+    
+    <script type="text/javascript">
+    
+    // masonry navigation
+    var elements = document.getElementsByClassName('masonry-navigation');
+    var msnry;
+    var nElements = elements.length;
+    for(var i = 0; i < nElements; i++){
+        msnry = new Masonry( elements[i], {
+    //    columnWidth: 268,
+        gutter: 10,
+        itemSelector: '.masonry-navigation-item',
+        });
+    }
+    </script>
+    
+    
+    <script type="text/javascript">
+        //    tumblr custom controls click
+        $('.controls-button').click(function(){
+            $('body').toggleClass('controls-click');
+        });
+        
+        {block:IfNotDisableShowMoreInfo}
+        //     toggle more info
+        $('.container-show-more-info').hide();
+            $('.toggle-tags').click(function(event) {
+                $(this).closest('.container-posts').find('.container-show-more-info').slideToggle(200)
+                event.preventDefault();
+            });
+        
+        {/block:IfNotDisableShowMoreInfo}
+        
+        //    custom date 
+        $(document).ready(function() {
+            $(".time-ago").timeAgo({
+            time: "letter", // can be "letter" "short" or "word"
+            spaces: false, // adds spaces between words and numbers
+            words: false, // turns numbers to words
+            prefix: "", // adds a prefix to the outputted string. could be "~" or "about"
+            suffix: "", // adds a suffix to the outputted string. could be "ago"
+            });
+        });
+        
+        //    tooltips 
+        tippy('a[title], span[title], div[title]', {
+            theme: 'custom',
+            arrow: false,
+            zIndex: 9999999999,
+            maxWidth: 300,
+        
+            content(reference) {
+              const title = reference.getAttribute('title');
+              reference.removeAttribute('title');
+              return title;
+            },
+          });
+
+        //    custom notecount
+        var $container = $('.theme-container');
+            $container.find('.notecount').each(function(){
+                var n = $(this).html().split(' ')[0].replace(/,/g, '');
+                if (n > 999) {
+                    n = Math.floor(n / 100) / 10;
+                    $(this).text(n + 'k');
+                }
+        });
+        
+        //    search box
+        $(document).ready(function(){
+           $('.search').submit(function(event){
+               var value = $('input:first').val();
+               location.replace('http://{Name}.tumblr.com/tagged/' + value);
+           });
+        });
+
+        
+        //    initialize css photosets
+        function gatherData(images, arr) {
+          for (let i = 0; i < images.length; i++) {
+            let currentData = {
+              "width": images[i].getAttribute('data-width'),
+              "height": images[i].getAttribute('data-height'),
+              "low_res": images[i].getAttribute('data-lowres'),
+              "high_res": images[i].getAttribute('data-highres')
+            };
+            arr.push(currentData);
+          }
+        }
+        function getIndex(elem) {
+          let i = 0;
+          while( (elem = elem.previousElementSibling) != null ) i++;
+          return i;
+        }
+        function lightbox(elem) {
+          let currentPhotoset = elem.parentNode;
+          let photosetPhotos = currentPhotoset.getElementsByTagName('div');
+          let data = [];
+          gatherData(photosetPhotos, data);
+          Tumblr.Lightbox.init(data, getIndex(elem) + 1);
+        }
+
+        //   detach sidebar on small screens
+        var sidebarBottom = document.querySelector('.sidebar-content');
+        var selectedSidebarBottom = sidebarBottom.getBoundingClientRect().bottom;
+        var selectedSidebarWidth = sidebarBottom.getBoundingClientRect().width;
+        var windowHeight = $(window).height();
+        
+        if(selectedSidebarBottom >= windowHeight) {
+            $('.sidebar-content').css('position', 'static');
+            $('#mobile-pagination').css({'visibility': 'visible','overflow':'visible','display': 'inline-block', 'margin-right':'1rem'});
+        }
+        
+        
+        //    feather icons (custom icons) 
+        feather.replace();
+
+    </script>
+</body>
+
+</html>
