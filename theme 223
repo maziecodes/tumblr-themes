@@ -1413,6 +1413,9 @@
         margin-bottom: var(--postsMargin);
     }
     
+    .caption iframe, .caption figure {
+        width:'100%;
+    }
     
     /* photosets */
     [photoset-layout] {
