@@ -1311,6 +1311,10 @@
         justify-content:var(--sidebarLinkTextPosition);
     }
     
+     .sidebar-links-text a {
+        color: var(--sidebarLinkIconsColor);
+    }
+    
     .sidebar-search {
         width: 100%;
         box-sizing: border-box;
