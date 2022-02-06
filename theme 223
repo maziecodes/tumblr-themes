@@ -47,15 +47,19 @@
     <!-- light color options -->
     <meta name="color:Background Theme Color" content="#fdfdfd" />
     <meta name="color:Body Text Color" content="#404040" />
+    <meta name="color:Body Bold Color" content="#404040">
+    <meta name="color:Body Italic Color" content="#828282">
     <meta name="color:Body Link Color" content="#949494" />
     <meta name="color:Body Link Hover Color" content="#404040" />
-    <meta name="color:Bold Color" content="#404040">
-    <meta name="color:Italic Color" content="#828282">
     <meta name="color:Sidebar Title Color" content="#404040">
     <meta name="color:Sidebar Text Color" content="#404040">
+    <meta name="color:Sidebar Bold Color" content="#404040">
+    <meta name="color:Sidebar Italic Color" content="#828282">
     <meta name="color:Sidebar Link Icons Color" content="#404040">
     <meta name="color:Sidebar Link Text Color" content="#404040">
+    <meta name="color:Sidebar Primary Link Color" content="#404040">
     <meta name="color:Sidebar Primary Background Color" content="#ffffff">
+    <meta name="color:Sidebar Secondary Link Color" content="#404040">
     <meta name="color:Sidebar Secondary Background Color" content="#edecec">
     <meta name="color:Hover Text Background Color" content="#1a1a1a" />
     <meta name="color:Hover Text Color" content="#ffffff" />
@@ -75,14 +79,19 @@
     <!-- dark color options -->
     <meta name="color:Dark Background Theme Color" content="#0e0e0e" />
     <meta name="color:Dark Body Text Color" content="#959595" />
+    <meta name="color:Dark Body Bold Color" content="#f7f7f7">
+    <meta name="color:Dark Body Italic Color" content="#acacac">
     <meta name="color:Dark Body Link Color" content="#f7f7f7" />
     <meta name="color:Dark Body Link Hover Color" content="#f6cf6a" />
-    <meta name="color:Dark Bold Color" content="#f7f7f7">
-    <meta name="color:Dark Italic Color" content="#acacac">
     <meta name="color:Dark Sidebar Title Color" content="#f7f7f7">
     <meta name="color:Dark Sidebar Text Color" content="#959595">
+    <meta name="color:Dark Sidebar Bold Color" content="#404040">
+    <meta name="color:Dark Sidebar Italic Color" content="#828282">
     <meta name="color:Dark Sidebar Link Icons Color" content="#f7f7f7">
+    <meta name="color:Dark Sidebar Link Text Color" content="#404040">
+    <meta name="color:Dark Sidebar Primary Link Color" content="#404040">
     <meta name="color:Dark Sidebar Primary Background Color" content="#191919">
+    <meta name="color:Dark Sidebar Secondary Link Color" content="#404040">
     <meta name="color:Dark Sidebar Secondary Background Color" content="#151515">
     <meta name="color:Dark Hover Text Background Color" content="#ffffff" />
     <meta name="color:Dark Hover Text Color" content="#171717" />
@@ -696,19 +705,23 @@
         /*   colors   */
         --backgroundThemeColor: {color:Background Theme Color};
         --bodyTextColor: {color:Body Text Color};
+        --bodyBoldColor: {color:Body Bold Color};
+        --bodyItalicColor: {color:Body Italic Color};
         --bodyLinkColor: {color:Body Link Color};
         --bodyLinkHoverColor: {color:Body Link Hover Color};
-        --boldColor: {color:Bold Color};
-        --italicColor: {color:Italic Color};
         --sidebarTextColor: {color:Sidebar Text Color};
+        --sidebarBoldColor: {color:Sidebar Bold Color};
+        --sidebarItalicColor: {color:Sidebar Italic Color};
         --sidebarLinkIconsColor: {color:Sidebar Link Icons Color};
         --sidebarLinkTextColor: {color:Sidebar Link Text Color};
         --sidebarTitleColor: {color:Sidebar Title Color};
+        --sidebarPrimaryLinkColor: {color:Sidebar Primary Link Color};
         --sidebarPrimaryBackgroundColor: {color:Sidebar Primary Background Color};
+        --sidebarSecondaryLinkColor: {color:Sidebar Secondary Link Color};
         --sidebarSecondaryBackgroundColor: {color:Sidebar Secondary Background Color};
         --hoverTextBackgroundColor: {color:Hover Text Background Color};
         --hoverTextColor: {color:Hover Text Color};
-        --datePrimaryLinkColor:{color:Date Link Color};
+        --datePrimaryLinkColor:{color:Date Primary Link Color};
         --datePrimaryBackgroundColor: {color:Date Primary Background Color};
         --dateSecondaryLinkColor:{color:Date Secondary Link Color};
         --dateSecondaryBackgroundColor: {color:Date Secondary Background Color};
@@ -846,14 +859,19 @@
     [data-theme="dark"] {
         --backgroundThemeColor: {color:Dark Background Theme Color};
         --bodyTextColor: {color:Dark Body Text Color};
+        --bodyBoldColor: {color:Dark Body Bold Color};
+        --bodyItalicColor: {color:Dark Body Italic Color};
         --bodyLinkColor: {color:Dark Body Link Color};
         --bodyLinkHoverColor: {color:Dark Body Link Hover Color};
-        --boldColor: {color:Dark Bold Color};
-        --italicColor: {color:Dark Italic Color};
         --sidebarTextColor: {color:Dark Sidebar Text Color};
+        --sidebarBoldColor: {color:Dark Sidebar Bold Color};
+        --sidebarItalicColor: {color:Dark Sidebar Italic Color};
         --sidebarLinkIconsColor: {color:Dark Sidebar Link Icons Color};
+        --sidebarLinkTextColor: {color:Dark Sidebar Link Text Color};
         --sidebarTitleColor: {color:Dark Sidebar Title Color};
+        --sidebarPrimaryLinkColor: {color:Dark Sidebar Primary Link Color};
         --sidebarPrimaryBackgroundColor: {color:Dark Sidebar Primary Background Color};
+        --sidebarSecondaryLinkColor: {color:Dark Sidebar Secondary Link Color};
         --sidebarSecondaryBackgroundColor: {color:Dark Sidebar Secondary Background Color};
         --hoverTextBackgroundColor: {color:Dark Hover Text Background Color};
         --hoverTextColor: {color:Dark Hover Text Color};
@@ -929,7 +947,7 @@
         font-weight:var(--postsTitlesFontWeight);
         letter-spacing: var(--postsTitlesFontLetterSpacing);
         word-spacing: var(--postsTitlesFontWordSpacing);
-        color:var(--boldColor);
+        color:var(--bodyBoldColor);
         text-transform:var(--postsTitlesTextTransform);
         font-size:var(--postsTitlesFontSize);
         text-align:var(--postsTitlesTextPosition);
@@ -937,12 +955,12 @@
     }
     
     strong, bold, b {
-        color:var(--boldColor);
+        color:var(--bodyBoldColor);
         font-weight:var(--boldFontWeight);
     }
     
-    italic, i, em {
-        color:var(--italicColor);
+    italic, em, i {
+        color:var(--bodyItalicColor);
     }
     
     hr {
@@ -983,12 +1001,12 @@
     }
     
     ::-moz-selection {
-        background-color: var(--boldColor);
+        background-color: var(--bodyBoldColor);
         color:var(--postsBackgroundColor);
     }
     
     ::selection {
-        background-color: var(--boldColor);
+        background-color: var(--bodyBoldColor);
         color:var(--postsBackgroundColor);
     }
     
@@ -1151,8 +1169,12 @@
         box-sizing: border-box;
     }
     
-    .sidebar-description a, .sidebar-pagination a {
-        color: var(--sidebarLinkIconsColor);
+    .sidebar-description a {
+        color: var(--sidebarPrimaryLinkColor);
+    }
+    
+    .sidebar-pagination a, .sidebar-pagination ul li .cp {
+        color: var(--sidebarSecondaryLinkColor);
     }
     
     .sidebar-description a:hover, .sidebar-navigation a:hover, .sidebar-pagination a:hover {
@@ -1219,7 +1241,9 @@
         display:flex;
         align-content:var(--sidebarLinkIconsPosition);
         justify-content:var(--sidebarLinkIconsPosition);
+        {block:ifShowBorders}
         border-bottom:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {/block:ifShowBorders}
         {block:IfNotSidebarTitle}
             border-bottom:0;
         {/block:IfNotSidebarTitle}
@@ -1250,12 +1274,27 @@
         align-items:var(--descriptionTextVerticalPosition);
     }
     
+    .sidebar-description strong,
+    .sidebar-description bold, 
+    .sidebar-description b {
+        color:var(--sidebarBoldColor);
+        font-weight:var(--boldFontWeight);
+    }
+    
+    .sidebar-description italic, 
+    .sidebar-description em, 
+    .sidebar-description i {
+        color:var(--sidebarItalicColor);
+    }
+    
     .sidebar-description-content {
         text-align:var(--descriptionTextHorizontalPosition);
     }
     
     .sidebar-navigation {
+        {block:ifShowBorders}
         border-left:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {/block:ifShowBorders}
         {block:IfSidebarLinksText}
         margin: 0 1rem;
         {/block:IfSidebarLinksText}
@@ -1319,7 +1358,9 @@
         width: 100%;
         box-sizing: border-box;
         padding: 0 1rem;
+        {block:ifShowBorders}
         border-bottom:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {/block:ifShowBorders}
     }
     
     .sidebar-search input {
@@ -1400,7 +1441,7 @@
     
     .search-result .search_query, .tag-wrapper .tag {
         font-weight: var(--boldFontWeight);
-        color: var(--boldColor);
+        color: var(--bodyBoldColor);
     }
     
     .container-posts img {
@@ -1617,7 +1658,9 @@
         word-spacing: var(--dateFontWordSpacing);
         line-height:var(--dateLineHeight);
         padding: 1rem;
+        {block:ifShowBorders}
         border-top:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {/block:ifShowBorders}
     }
     
     .container-date-content {
@@ -1683,7 +1726,9 @@
         line-height:var(--tagsLineHeight);
         grid-row: 1;
         grid-column: 1 / 3;
+        {block:ifShowBorders}
         border-top:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        {/block:ifShowBorders}
     }
     
     .container-tags a {
@@ -1921,7 +1966,7 @@
         padding:1rem 2rem;
         font-size:var(--postsTitlesFontSize);
         text-transform:var(--postsTitlesTextTransform);
-        color:var(--boldColor);
+        color:var(--bodyBoldColor);
         font-weight:var(--boldFontWeight);
         text-align:var(--postsTextPosition);
     }
@@ -1971,7 +2016,7 @@
     
     .label {
         font-weight:var(--boldFontWeight);
-        color:var(--boldColor);
+        color:var(--bodyBoldColor);
     }
      
     .line {
@@ -2068,7 +2113,7 @@
         
         .container {
             width: 90%;
-            margin: 0 auto;
+            margin: 0 auto var(--postsMargin);
         }
         
         .sidebar-image {
