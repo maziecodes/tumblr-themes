@@ -1657,9 +1657,10 @@
         letter-spacing: var(--dateFontLetterSpacing);
         word-spacing: var(--dateFontWordSpacing);
         line-height:var(--dateLineHeight);
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         {block:ifShowBorders}
         border-top:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        padding: 1rem;
         {/block:ifShowBorders}
     }
     
@@ -1714,7 +1715,7 @@
     }
     
     .container-tags {
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         box-sizing: border-box;
         text-align: var(--tagsTextPosition);
         text-transform: var(--tagsTextTransform);
@@ -1728,6 +1729,7 @@
         grid-column: 1 / 3;
         {block:ifShowBorders}
         border-top:var(--bordersSize) var(--bordersStyle) var(--bordersColor);
+        padding: 1rem;
         {/block:ifShowBorders}
     }
     
