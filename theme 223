@@ -619,6 +619,7 @@
     
     
     <!-- conditionals -->
+    <meta name="if:Feather Icons" content="1"/>
     <meta name="if:Sidebar Image" content="1"/>
     <meta name="if:Sidebar Icon Image" content="0"/>
     <meta name="if:Sidebar Icon Square Style" content="0"/>
@@ -647,15 +648,15 @@
     <!--sidebar link-->
     <meta name="text:Home URL" content="/" />
     <meta name="text:Home Text" content="Home" />
-    <meta name="text:Home Icon" content="home-o" />
+    <meta name="text:Home Icon" content="home" />
     
     <meta name="text:Ask URL" content="/ask" />
     <meta name="text:Ask Text" content="Ask" />
-    <meta name="text:Ask Icon" content="envelope-o" />
+    <meta name="text:Ask Icon" content="mail" />
     
     <meta name="text:Sidebar Link 1 URL" content="/" />
     <meta name="text:Sidebar Link 1 Text" content="Link 1" />
-    <meta name="text:Sidebar Link 1 Icon" content="app-o" />
+    <meta name="text:Sidebar Link 1 Icon" content="grid" />
     
     <meta name="text:Sidebar Link 2 URL" content="/" />
     <meta name="text:Sidebar Link 2 Text" content="Link 2" />
@@ -663,11 +664,11 @@
     
     <meta name="text:Sidebar Link 3 URL" content="/" />
     <meta name="text:Sidebar Link 3 Text" content="Link 3" />
-    <meta name="text:Sidebar Link 3 Icon" content="hashtag" />
+    <meta name="text:Sidebar Link 3 Icon" content="hash" />
     
     <meta name="text:Sidebar Link 4 URL" content="/" />
     <meta name="text:Sidebar Link 4 Text" content="Link 4" />
-    <meta name="text:Sidebar Link 4 Icon" content="notes-o" />
+    <meta name="text:Sidebar Link 4 Icon" content="edit" />
 
     {/block:Hidden}
 
@@ -1177,6 +1178,12 @@
         color: var(--sidebarSecondaryLinkColor);
     }
     
+    .theme-switch-svg svg {
+        width:var(--paginationLinksFontSize);
+        height:var(--paginationLinksFontSize);
+        stroke: var(--sidebarSecondaryLinkColor);
+    }
+    
     .sidebar-description a:hover, .sidebar-navigation a:hover, .sidebar-pagination a:hover {
         color: var(--bodyLinkHoverColor);
     }
@@ -1308,6 +1315,12 @@
     
     .sidebar-navigation .cp {
         font-size:var(--sidebarLinkIconsSize);
+        color: var(--sidebarLinkIconsColor);
+    }
+    
+    .sidebar-navigation .feather {
+        width:var(--sidebarLinkIconsSize);
+        height:var(--sidebarLinkIconsSize);
         color: var(--sidebarLinkIconsColor);
     }
     
@@ -1700,9 +1713,15 @@
         font-size:var(--dateFontSize);
     }
     
+    .container-date-content .show-more-info .feather {
+        color: var(--datePrimaryLinkColor);
+        width:var(--dateFontSize);
+        height:var(--dateFontSize);
+    }
         
     .container-date-content .pinned-post {
         justify-self: center;
+        align-self: center;
     }
     
     .container-date-content .pinned-post .cp {
@@ -1710,7 +1729,14 @@
         font-size:calc(var(--dateFontSize) - 1px);
     }
     
-    .container-date-content .pinned-post .cp:hover {
+    .container-date-content .pinned-post .feather {
+        margin-left: 0.5rem;
+        width:calc(var(--dateFontSize) - 1px);
+        height:calc(var(--dateFontSize) - 1px);
+    }
+    
+    .container-date-content .pinned-post .cp:hover,
+    .container-date-content .pinned-post .feather:hover {
         color:inherit;
     }
     
@@ -2190,6 +2216,13 @@
             color: var(--tumblrControlsIconColor);
             font-size:1.5rem;
         }
+        
+        .controls-button .feather, 
+        #btn-mobile .feather {
+            color: var(--tumblrControlsIconColor);
+            width:1.5rem;
+            height:1.5rem;
+        }
 
         {/block:ifCustomControls}
         
@@ -2206,9 +2239,6 @@
         }
         
         .theme-switch-svg svg {
-            width: var(--bodyFontSize);
-            height: var(--bodyFontSize);
-            stroke: var(--bodyTextColor);
             cursor: pointer;
         }
         {/block:ifNotDisableSwitchThemeColor}
@@ -2256,7 +2286,14 @@
                             <li>
                                 <a href="{text:Home URL}">                             
                                     {block:IfNotSidebarLinksText}
+                                    {block:IfNotFeatherIcons}
                                         <span class="cp cp-{text:Home Icon}" title="{text:Home Text}"></span>
+                                    {/block:IfNotFeatherIcons}
+                                    {block:IfFeatherIcons}
+                                        <span title="{text:Home Text}">
+                                        <i data-feather="{text:Home Icon}" class="feather"></i>
+                                        </span>
+                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Home Text}
@@ -2267,7 +2304,14 @@
                             <li>
                                 <a href="{text:Ask URL}">
                                     {block:IfNotSidebarLinksText}
+                                    {block:IfNotFeatherIcons}
                                         <span class="cp cp-{text:Ask Icon}" title="{text:Ask Text}"></span>
+                                    {/block:IfNotFeatherIcons}
+                                    {block:IfFeatherIcons}
+                                        <span title="{text:Ask Text}">
+                                        <i data-feather="{text:Ask Icon}" class="feather"></i>
+                                        </span>
+                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Ask Text}
@@ -2275,19 +2319,18 @@
                                 </a>
                             </li>
                             
-                            {block:ifSubmitLink}
-                            <li>
-                                <a href="{text:Submit Link}">
-                                    {text:Submit Text}
-                                </a>
-                            </li>
-                            {/block:ifSubmitLink}
-                            
                             {block:ifSidebarLink1}
                             <li>
                                 <a href="{text:Sidebar Link 1 URL}">
                                     {block:IfNotSidebarLinksText}
+                                    {block:IfNotFeatherIcons}
                                         <span class="cp cp-{text:Sidebar Link 1 Icon}" title="{text:Sidebar Link 1 Text}"></span>
+                                    {/block:IfNotFeatherIcons}
+                                    {block:IfFeatherIcons}
+                                        <span title="{text:Sidebar Link 1 Text}">
+                                        <i data-feather="{text:Sidebar Link 1 Icon}" title="{text:Sidebar Link 1 Text}" class="feather"></i>
+                                        </span>
+                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Sidebar Link 1 Text}
@@ -2300,7 +2343,14 @@
                             <li>
                                 <a href="{text:Sidebar Link 2 URL}">
                                     {block:IfNotSidebarLinksText}
+                                    {block:IfNotFeatherIcons}
                                         <span class="cp cp-{text:Sidebar Link 2 Icon}" title="{text:Sidebar Link 2 Text}"></span>
+                                    {/block:IfNotFeatherIcons}
+                                    {block:IfFeatherIcons}
+                                        <span title="{text:Sidebar Link 2 Text}">
+                                        <i data-feather="{text:Sidebar Link 2 Icon}" class="feather"></i>
+                                        </span>
+                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Sidebar Link 2 Text}
@@ -2313,7 +2363,14 @@
                             <li>
                                 <a href="{text:Sidebar Link 3 URL}">
                                     {block:IfNotSidebarLinksText}
+                                    {block:IfNotFeatherIcons}
                                         <span class="cp cp-{text:Sidebar Link 3 Icon}" title="{text:Sidebar Link 3 Text}"></span>
+                                    {/block:IfNotFeatherIcons}
+                                    {block:IfFeatherIcons}
+                                        <span title="{text:Sidebar Link 3 Text}">
+                                        <i data-feather="{text:Sidebar Link 3 Icon}" class="feather"></i>
+                                        </span>
+                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Sidebar Link 3 Text}
@@ -2326,7 +2383,14 @@
                             <li>
                                 <a href="{text:Sidebar Link 4 URL}">
                                     {block:IfNotSidebarLinksText}
+                                    {block:IfNotFeatherIcons}
                                         <span class="cp cp-{text:Sidebar Link 4 Icon}" title="{text:Sidebar Link 4 Text}"></span>
+                                    {/block:IfNotFeatherIcons}
+                                    {block:IfFeatherIcons}
+                                        <span title="{text:Sidebar Link 4 Text}">
+                                        <i data-feather="{text:Sidebar Link 4 Icon}" class="feather"></i>
+                                        </span>
+                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Sidebar Link 4 Text}
@@ -2818,14 +2882,27 @@
                                 Show more info
                             {/block:IfShowMoreInfoText}
                             {block:IfNotShowMoreInfoText}
-                                <span title="Show more info" class="cp cp-add-o"></span>
+                                {block:IfNotFeatherIcons}
+                                    <span title="Show more info" class="cp cp-add-o"></span>
+                                {/block:IfNotFeatherIcons}
+                                {block:IfFeatherIcons}
+                                    <span title="Show more info">
+                                    <i data-feather="plus-circle" class="feather"></i>
+                                    </span>
+                                {/block:IfFeatherIcons}
                             {/block:IfNotShowMoreInfoText}
                             {/block:IfNotDisableShowMoreInfo}
                         </div>
                         
                         <div class="pinned-post">
                         {block:PinnedPostLabel}
-                            {PinnedPostLabel} <span class="cp cp-pin-o"></span>
+                            {PinnedPostLabel} 
+                            {block:IfNotFeatherIcons}
+                                <span class="cp cp-pin-o"></span>
+                            {/block:IfNotFeatherIcons}
+                            {block:IfFeatherIcons}
+                                <i data-feather="map-pin" class="feather"></i>
+                            {/block:IfFeatherIcons}
                         {/block:PinnedPostLabel}
                         </div>
 
@@ -2901,13 +2978,28 @@
     
     <!-- top right icon for custom tumblr controls -->
     {block:ifCustomControls}
-        <div title="Tumblr Controls" class="controls-button"><span class="cp cp-cog-o"></span></div>
+        <div title="Tumblr Controls" class="controls-button">
+        {block:IfNotFeatherIcons}
+            <span class="cp cp-cog-o"></span>
+        {/block:IfNotFeatherIcons}
+        {block:IfFeatherIcons}
+            <span title="Tumblr Controls">
+            <i data-feather="menu" class="feather"></i>
+            </span>
+        {/block:IfFeatherIcons}
+        </div>
     {/block:ifCustomControls}
     
 
 {block:ifNotDisableSwitchThemeColor}
 <!-- scripts for dark theme -->
 <script type="text/javascript">
+
+// The icons
+const sunIcon = '<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
+
+const moonIcon = '<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+
 
 // Get the div where the icons will be added
 const themeIcon = document.querySelector('.theme-switch-svg');
@@ -2923,11 +3015,11 @@ const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"
 if (currentTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', currentTheme);
     toggleSwitch.checked = true;
-    themeIcon.innerHTML = '<span class="cp cp-sun"></span>';
+    themeIcon.innerHTML = sunIcon;
 } else {
     document.documentElement.setAttribute('data-theme', currentTheme);
     toggleSwitch.checked = false;
-    themeIcon.innerHTML = '<span class="cp cp-moon-o"></span>';
+    themeIcon.innerHTML = moonIcon;
 }
 
 
@@ -2936,13 +3028,13 @@ function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        themeIcon.innerHTML = '<span class="cp cp-sun"></span>';
+        themeIcon.innerHTML = sunIcon;
         toggleSwitch.checked = true;
-      themeIcon.innerHTML = '<span class="cp cp-sun"></span>';
+        themeIcon.innerHTML = sunIcon;
     } else {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
-            themeIcon.innerHTML = '<span class="cp cp-moon-o"></span>';
+            themeIcon.innerHTML = moonIcon;
             toggleSwitch.checked = false;
         }    
 }
@@ -3010,7 +3102,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
         });
         
         //    tooltips 
-        tippy('a[title], span[title], div[title]', {
+        tippy('a[title], span[title], div[title], i[title]', {
             theme: 'custom',
             arrow: false,
             zIndex: 9999999999,
