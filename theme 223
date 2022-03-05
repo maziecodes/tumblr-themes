@@ -2224,7 +2224,7 @@
                 {block:IfNotSidebarIconImage}
                 {block:IfSidebarImage}
                 <div class="sidebar-image">
-                     <img src="https://static.tumblr.com/0siu224/B3wr52f96/7.gif" />
+                     <img src="{image:Sidebar Image}" />
                 </div>
                 {/block:IfSidebarImage}
                 {/block:IfNotSidebarIconImage}
@@ -2233,7 +2233,7 @@
                 {block:IfSidebarIconImage}
                 <div class="sidebar-icon-container">
                     <div class="sidebar-image-icon">
-                        <img src="https://64.media.tumblr.com/0d856337a34f0cb00706b5ab8d86ff51/10df61731f675936-dd/s2048x3072/29a2f31179bfd6aa87cabebd7a17ebf15a74eca7.png" />
+                     <img src="{image:Sidebar Image}" />
                     </div>
                 </div>
                 {/block:IfSidebarIconImage}
