@@ -17,7 +17,6 @@
     css photosets by annasthms
     time stamp by bychloethemes
     smooth scroll by michael herf and balazs galambosi
-    cappuccicons icons by suiomi.com
     feathericons by github.com/feathericons/feather
     normalize reest html by necolas.github.io
     tippyjs tooltips by silbrigthemes
@@ -619,7 +618,6 @@
     
     
     <!-- conditionals -->
-    <meta name="if:Feather Icons" content="1"/>
     <meta name="if:Sidebar Image" content="1"/>
     <meta name="if:Sidebar Icon Image" content="0"/>
     <meta name="if:Sidebar Icon Square Style" content="0"/>
@@ -683,8 +681,6 @@
     <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet"> <!-- photosets -->
 
     <!-- custom icons -->
-    <script src="//pull.cappuccicons.com/cpf.js"></script> <!-- custom icons -->
-    <link href="//solrainha.github.io/saturnicons/saturnicons.css" rel="stylesheet"> <!-- custom icons -->
     <script src="https://unpkg.com/feather-icons"></script> <!-- custom icons -->
 
     <!-- custom fonts -->
@@ -1069,7 +1065,7 @@
     }
 
     /* custom icons */
-    .cp:hover, .feather:hover, .sidebar-pagination ul li .cp:hover {
+    .feather:hover {
          color: var(--bodyLinkHoverColor);
          stroke: var(--bodyLinkHoverColor);
     }
@@ -1174,7 +1170,7 @@
         color: var(--sidebarPrimaryLinkColor);
     }
     
-    .sidebar-pagination a, .sidebar-pagination ul li .cp {
+    .sidebar-pagination a {
         color: var(--sidebarSecondaryLinkColor);
     }
     
@@ -1313,21 +1309,12 @@
         {/block:IfNotHideDescription}
     }
     
-    .sidebar-navigation .cp {
-        font-size:var(--sidebarLinkIconsSize);
-        color: var(--sidebarLinkIconsColor);
-    }
-    
     .sidebar-navigation .feather {
         width:var(--sidebarLinkIconsSize);
         height:var(--sidebarLinkIconsSize);
         color: var(--sidebarLinkIconsColor);
     }
-    
-    .sidebar-navigation .cp:hover {
-        color: var(--bodyLinkHoverColor);
-    }
-    
+
     .sidebar-navigation ul {
         list-style: none;
         display:flex;
@@ -1633,8 +1620,7 @@
         color:var(--bodyLinkHoverColor);
     }
     
-    .container-date a:hover,
-    .container-date-content .show-more-info .cp:hover,
+    .container-date a:hover
     .container-date-content .show-more-info:hover {
         color:var(--bodyLinkHoverColor);
     }
@@ -1708,11 +1694,6 @@
         cursor: pointer;
     }
     
-    .container-date-content .show-more-info .cp {
-        color: var(--datePrimaryLinkColor);
-        font-size:var(--dateFontSize);
-    }
-    
     .container-date-content .show-more-info .feather {
         color: var(--datePrimaryLinkColor);
         width:var(--dateFontSize);
@@ -1724,18 +1705,12 @@
         align-self: center;
     }
     
-    .container-date-content .pinned-post .cp {
-        margin-left: 0.5rem;
-        font-size:calc(var(--dateFontSize) - 1px);
-    }
-    
     .container-date-content .pinned-post .feather {
         margin-left: 0.5rem;
         width:calc(var(--dateFontSize) - 1px);
         height:calc(var(--dateFontSize) - 1px);
     }
     
-    .container-date-content .pinned-post .cp:hover,
     .container-date-content .pinned-post .feather:hover {
         color:inherit;
     }
@@ -2209,13 +2184,6 @@
            -o-transition: all 0.5s;
            transition: all 0.5s;
         }
-         
-         
-        .controls-button .cp, 
-        #btn-mobile .cp {
-            color: var(--tumblrControlsIconColor);
-            font-size:1.5rem;
-        }
         
         .controls-button .feather, 
         #btn-mobile .feather {
@@ -2256,7 +2224,7 @@
                 {block:IfNotSidebarIconImage}
                 {block:IfSidebarImage}
                 <div class="sidebar-image">
-                     <img src="{image:Sidebar Image}" />
+                     <img src="https://static.tumblr.com/0siu224/B3wr52f96/7.gif" />
                 </div>
                 {/block:IfSidebarImage}
                 {/block:IfNotSidebarIconImage}
@@ -2265,7 +2233,7 @@
                 {block:IfSidebarIconImage}
                 <div class="sidebar-icon-container">
                     <div class="sidebar-image-icon">
-                        <img src="{image:Sidebar Image}" />
+                        <img src="https://64.media.tumblr.com/0d856337a34f0cb00706b5ab8d86ff51/10df61731f675936-dd/s2048x3072/29a2f31179bfd6aa87cabebd7a17ebf15a74eca7.png" />
                     </div>
                 </div>
                 {/block:IfSidebarIconImage}
@@ -2286,14 +2254,9 @@
                             <li>
                                 <a href="{text:Home URL}">                             
                                     {block:IfNotSidebarLinksText}
-                                    {block:IfNotFeatherIcons}
-                                        <span class="cp cp-{text:Home Icon}" title="{text:Home Text}"></span>
-                                    {/block:IfNotFeatherIcons}
-                                    {block:IfFeatherIcons}
                                         <span title="{text:Home Text}">
                                         <i data-feather="{text:Home Icon}" class="feather"></i>
                                         </span>
-                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Home Text}
@@ -2304,14 +2267,9 @@
                             <li>
                                 <a href="{text:Ask URL}">
                                     {block:IfNotSidebarLinksText}
-                                    {block:IfNotFeatherIcons}
-                                        <span class="cp cp-{text:Ask Icon}" title="{text:Ask Text}"></span>
-                                    {/block:IfNotFeatherIcons}
-                                    {block:IfFeatherIcons}
                                         <span title="{text:Ask Text}">
                                         <i data-feather="{text:Ask Icon}" class="feather"></i>
                                         </span>
-                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Ask Text}
@@ -2323,14 +2281,9 @@
                             <li>
                                 <a href="{text:Sidebar Link 1 URL}">
                                     {block:IfNotSidebarLinksText}
-                                    {block:IfNotFeatherIcons}
-                                        <span class="cp cp-{text:Sidebar Link 1 Icon}" title="{text:Sidebar Link 1 Text}"></span>
-                                    {/block:IfNotFeatherIcons}
-                                    {block:IfFeatherIcons}
                                         <span title="{text:Sidebar Link 1 Text}">
                                         <i data-feather="{text:Sidebar Link 1 Icon}" title="{text:Sidebar Link 1 Text}" class="feather"></i>
                                         </span>
-                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Sidebar Link 1 Text}
@@ -2343,14 +2296,9 @@
                             <li>
                                 <a href="{text:Sidebar Link 2 URL}">
                                     {block:IfNotSidebarLinksText}
-                                    {block:IfNotFeatherIcons}
-                                        <span class="cp cp-{text:Sidebar Link 2 Icon}" title="{text:Sidebar Link 2 Text}"></span>
-                                    {/block:IfNotFeatherIcons}
-                                    {block:IfFeatherIcons}
                                         <span title="{text:Sidebar Link 2 Text}">
                                         <i data-feather="{text:Sidebar Link 2 Icon}" class="feather"></i>
                                         </span>
-                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Sidebar Link 2 Text}
@@ -2363,14 +2311,9 @@
                             <li>
                                 <a href="{text:Sidebar Link 3 URL}">
                                     {block:IfNotSidebarLinksText}
-                                    {block:IfNotFeatherIcons}
-                                        <span class="cp cp-{text:Sidebar Link 3 Icon}" title="{text:Sidebar Link 3 Text}"></span>
-                                    {/block:IfNotFeatherIcons}
-                                    {block:IfFeatherIcons}
                                         <span title="{text:Sidebar Link 3 Text}">
                                         <i data-feather="{text:Sidebar Link 3 Icon}" class="feather"></i>
                                         </span>
-                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Sidebar Link 3 Text}
@@ -2383,14 +2326,9 @@
                             <li>
                                 <a href="{text:Sidebar Link 4 URL}">
                                     {block:IfNotSidebarLinksText}
-                                    {block:IfNotFeatherIcons}
-                                        <span class="cp cp-{text:Sidebar Link 4 Icon}" title="{text:Sidebar Link 4 Text}"></span>
-                                    {/block:IfNotFeatherIcons}
-                                    {block:IfFeatherIcons}
                                         <span title="{text:Sidebar Link 4 Text}">
                                         <i data-feather="{text:Sidebar Link 4 Icon}" class="feather"></i>
                                         </span>
-                                    {/block:IfFeatherIcons}
                                     {/block:IfNotSidebarLinksText}
                                     {block:IfSidebarLinksText}
                                         {text:Sidebar Link 4 Text}
@@ -2882,27 +2820,17 @@
                                 Show more info
                             {/block:IfShowMoreInfoText}
                             {block:IfNotShowMoreInfoText}
-                                {block:IfNotFeatherIcons}
-                                    <span title="Show more info" class="cp cp-add-o"></span>
-                                {/block:IfNotFeatherIcons}
-                                {block:IfFeatherIcons}
                                     <span title="Show more info">
                                     <i data-feather="plus-circle" class="feather"></i>
                                     </span>
-                                {/block:IfFeatherIcons}
                             {/block:IfNotShowMoreInfoText}
                             {/block:IfNotDisableShowMoreInfo}
                         </div>
                         
                         <div class="pinned-post">
                         {block:PinnedPostLabel}
-                            {PinnedPostLabel} 
-                            {block:IfNotFeatherIcons}
-                                <span class="cp cp-pin-o"></span>
-                            {/block:IfNotFeatherIcons}
-                            {block:IfFeatherIcons}
+                            {PinnedPostLabel}
                                 <i data-feather="map-pin" class="feather"></i>
-                            {/block:IfFeatherIcons}
                         {/block:PinnedPostLabel}
                         </div>
 
@@ -2979,14 +2907,9 @@
     <!-- top right icon for custom tumblr controls -->
     {block:ifCustomControls}
         <div title="Tumblr Controls" class="controls-button">
-        {block:IfNotFeatherIcons}
-            <span class="cp cp-cog-o"></span>
-        {/block:IfNotFeatherIcons}
-        {block:IfFeatherIcons}
             <span title="Tumblr Controls">
             <i data-feather="menu" class="feather"></i>
             </span>
-        {/block:IfFeatherIcons}
         </div>
     {/block:ifCustomControls}
     
