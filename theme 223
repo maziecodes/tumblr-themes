@@ -623,6 +623,7 @@
     <meta name="if:Sidebar Icon Square Style" content="0"/>
     <meta name="if:Sidebar Title" content="1"/>
     <meta name="if:Sidebar Links Text" content="0"/>
+    <meta name="if:Show Pages Link" content="0"/>
     <meta name="if:Hide Description" content="0"/>
     <meta name="if:Disable Switch Theme Color" content="0" />
     <meta name="if:Custom Controls" content="1"/>
@@ -2338,6 +2339,7 @@
                             </li>
                             {/block:ifSidebarLink4}
                             
+                            {block:IfShowPagesLink}
                             {block:HasPages}
                             {block:Pages}
                             <li>
@@ -2345,6 +2347,7 @@
                             </li>
                             {/block:Pages}
                             {/block:HasPages}
+                            {/block:IfShowPagesLink}
                         </ul>
                     </nav>
                 </div>
