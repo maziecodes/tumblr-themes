@@ -38,6 +38,7 @@
   {block:Hidden}
   <!-- image options -->
   <meta name="image:Sidebar Image" content="" />
+  <meta name="image:Background Image" content="" />
 
   <!-- light color options -->
   <meta name="color:Background Theme Color" content="#ffffff" />
@@ -903,6 +904,7 @@
     }
 
     body {
+      background:var(--backgroundThemeColor) url({image:Background Image});
       background-attachment:fixed;
       background-color:var(--backgroundThemeColor);
       font-size:var(--bodyFontSize);
