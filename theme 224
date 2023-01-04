@@ -676,11 +676,13 @@
   <link href="https://fonts.googleapis.com/css2?family={text:Posts Title Font Family}:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" /> 
 
   <!-- scripts  -->
+  {block:ifNotDisableSwitchThemeColor}
   <script>
     // light/dark toggle - rstylr
     const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     if (storedTheme) document.documentElement.setAttribute("data-theme", storedTheme); 
   </script>
+  {/block:ifNotDisableSwitchThemeColor}
 
   <style tmblr-npf>
     :root {
@@ -2921,6 +2923,9 @@
   <script>
     //    execute scripts after document load
     $(document).ready(function() {
+        
+    
+      {block:ifNotDisableSwitchThemeColor}
       // light/dark toggle - rstylr
       const toggle = document.getElementById("theme-toggle");
       toggle.onclick = function () {
@@ -2938,6 +2943,7 @@
         document.documentElement.setAttribute("data-theme", targetTheme);
         localStorage.setItem("theme", targetTheme);
       };
+      {/block:ifNotDisableSwitchThemeColor}
 
       //     toggle tumblr controls - seyche
       $('.controls-button').click(function(){
